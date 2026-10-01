@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OmniLog AI - High-Contrast Cyber Work Genome & Career Radar</title>
+  <title>OmniLog AI - Custom Engineered by Saran Raj for Saran Raj</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Font Awesome 6 Pro / Free CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <!-- Google Fonts: Syne, Plus Jakarta Sans & JetBrains Mono -->
+  <!-- Google Fonts: Orbitron, Syne, Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
@@ -28,11 +28,12 @@
             neonViolet: '#a855f7',
             neonAmber: '#ffb703',
             neonEmerald: '#00ffa3',
-            neonBlue: '#3b82f6',
+            neonGold: '#ffd700',
           },
           fontFamily: {
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
             display: ['Syne', 'sans-serif'],
+            cyber: ['Orbitron', 'sans-serif'],
             mono: ['"JetBrains Mono"', 'monospace'],
           },
           boxShadow: {
@@ -40,6 +41,7 @@
             'glow-fuchsia': '0 0 25px -2px rgba(255, 0, 122, 0.45)',
             'glow-emerald': '0 0 25px -2px rgba(0, 255, 163, 0.45)',
             'glow-amber': '0 0 25px -2px rgba(255, 183, 3, 0.45)',
+            'glow-gold': '0 0 30px 2px rgba(255, 215, 0, 0.35)',
             'card-high': '0 10px 40px -10px rgba(0, 0, 0, 0.85), inset 0 1px 0 0 rgba(255, 255, 255, 0.1)',
           }
         }
@@ -48,7 +50,7 @@
   </script>
 
   <style>
-    /* Ultra-High Contrast Neon Utilities */
+    /* Ultra-High Contrast Dark & Cyber Glows */
     body {
       background-color: #03050c;
       color: #f8fafc;
@@ -70,77 +72,101 @@
       background: #00f6ff;
     }
 
-    /* High-Contrast Card Shells with Crisp Luminous Borders */
+    /* Holographic Gradient Text */
+    .hologram-text {
+      background: linear-gradient(120deg, #00f6ff 0%, #ffd700 25%, #ff007a 50%, #00ffa3 75%, #00f6ff 100%);
+      background-size: 250% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: hologramShine 6s linear infinite;
+    }
+
+    @keyframes hologramShine {
+      to { background-position: 250% center; }
+    }
+
+    /* Cards with crisp Luminous Neon Borders */
     .card-neon-cyan {
-      background: rgba(8, 14, 28, 0.82);
+      background: rgba(8, 14, 28, 0.88);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
-      border: 1.5px solid rgba(0, 246, 255, 0.28);
-      box-shadow: 0 12px 35px -8px rgba(0, 0, 0, 0.8), 0 0 20px -6px rgba(0, 246, 255, 0.22);
+      border: 1.5px solid rgba(0, 246, 255, 0.35);
+      box-shadow: 0 12px 35px -8px rgba(0, 0, 0, 0.8), 0 0 20px -6px rgba(0, 246, 255, 0.25);
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .card-neon-cyan:hover {
-      border-color: rgba(0, 246, 255, 0.65);
-      box-shadow: 0 16px 45px -8px rgba(0, 0, 0, 0.9), 0 0 32px -4px rgba(0, 246, 255, 0.4);
-      transform: translateY(-2px);
+      border-color: rgba(0, 246, 255, 0.7);
+      box-shadow: 0 16px 45px -8px rgba(0, 0, 0, 0.9), 0 0 30px -4px rgba(0, 246, 255, 0.45);
     }
 
     .card-neon-fuchsia {
-      background: rgba(14, 8, 22, 0.82);
+      background: rgba(14, 8, 22, 0.88);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
-      border: 1.5px solid rgba(255, 0, 122, 0.3);
+      border: 1.5px solid rgba(255, 0, 122, 0.35);
       box-shadow: 0 12px 35px -8px rgba(0, 0, 0, 0.8), 0 0 20px -6px rgba(255, 0, 122, 0.25);
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .card-neon-fuchsia:hover {
       border-color: rgba(255, 0, 122, 0.7);
-      box-shadow: 0 16px 45px -8px rgba(0, 0, 0, 0.9), 0 0 32px -4px rgba(255, 0, 122, 0.45);
-      transform: translateY(-2px);
+      box-shadow: 0 16px 45px -8px rgba(0, 0, 0, 0.9), 0 0 30px -4px rgba(255, 0, 122, 0.45);
     }
 
     .card-neon-emerald {
-      background: rgba(6, 18, 14, 0.82);
+      background: rgba(6, 18, 14, 0.88);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
-      border: 1.5px solid rgba(0, 255, 163, 0.3);
+      border: 1.5px solid rgba(0, 255, 163, 0.35);
       box-shadow: 0 12px 35px -8px rgba(0, 0, 0, 0.8), 0 0 20px -6px rgba(0, 255, 163, 0.25);
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .card-neon-emerald:hover {
       border-color: rgba(0, 255, 163, 0.7);
-      box-shadow: 0 16px 45px -8px rgba(0, 0, 0, 0.9), 0 0 32px -4px rgba(0, 255, 163, 0.45);
-      transform: translateY(-2px);
+    }
+
+    .card-neon-gold {
+      background: rgba(22, 18, 8, 0.9);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1.5px solid rgba(255, 215, 0, 0.4);
+      box-shadow: 0 12px 35px -8px rgba(0, 0, 0, 0.8), 0 0 25px -6px rgba(255, 215, 0, 0.3);
     }
 
     .card-neon-neutral {
-      background: rgba(10, 16, 30, 0.85);
+      background: rgba(10, 16, 30, 0.88);
       backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1.5px solid rgba(255, 255, 255, 0.12);
+      border: 1.5px solid rgba(255, 255, 255, 0.14);
       box-shadow: 0 12px 35px -8px rgba(0, 0, 0, 0.85);
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .card-neon-neutral:hover {
-      border-color: rgba(255, 255, 255, 0.25);
     }
 
-    /* Gradients and Text Shadows */
-    .title-gradient {
-      background: linear-gradient(135deg, #ffffff 0%, #00f6ff 50%, #ff007a 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      filter: drop-shadow(0 2px 14px rgba(0, 246, 255, 0.35));
+    /* Laser Scanner Beam for Biometric Terminal */
+    .scanner-line {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #00f6ff, #ffffff, #00f6ff, transparent);
+      box-shadow: 0 0 15px #00f6ff, 0 0 25px #00f6ff;
+      animation: scanAnim 2.4s ease-in-out infinite alternate;
     }
 
-    .cyan-glow-text {
-      text-shadow: 0 0 16px rgba(0, 246, 255, 0.7), 0 0 32px rgba(0, 246, 255, 0.3);
-    }
-    .fuchsia-glow-text {
-      text-shadow: 0 0 16px rgba(255, 0, 122, 0.7), 0 0 32px rgba(255, 0, 122, 0.3);
+    @keyframes scanAnim {
+      0% { top: 6%; opacity: 0.2; }
+      50% { opacity: 1; }
+      100% { top: 92%; opacity: 0.2; }
     }
 
-    /* Floating scroll progress bar */
+    /* Shake animation on invalid key */
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-8px); }
+      40%, 80% { transform: translateX(8px); }
+    }
+    .animate-shake {
+      animation: shake 0.4s ease-in-out;
+    }
+
+    /* Floating Scroll Progress Bar */
     #scrollProgressTrack {
       position: fixed;
       right: 6px;
@@ -155,547 +181,705 @@
     #scrollProgressBar {
       width: 100%;
       height: 0%;
-      background: linear-gradient(180deg, #00f6ff 0%, #ff007a 50%, #00ffa3 100%);
-      box-shadow: 0 0 16px #00f6ff, 0 0 24px #ff007a;
+      background: linear-gradient(180deg, #00f6ff 0%, #ffd700 50%, #ff007a 100%);
+      box-shadow: 0 0 16px #00f6ff, 0 0 24px #ffd700;
       border-radius: 9999px;
-      transition: height 0.08s ease-out;
-    }
-
-    /* Pulse animation for DNA helix active state */
-    @keyframes neonPulse {
-      0%, 100% { opacity: 0.95; transform: scale(1); }
-      50% { opacity: 0.7; transform: scale(0.98); }
-    }
-    .animate-neon-pulse {
-      animation: neonPulse 3s infinite ease-in-out;
     }
   </style>
 </head>
 
-<body class="selection:bg-neonFuchsia selection:text-white relative overflow-x-hidden min-h-screen">
+<body class="selection:bg-neonFuchsia selection:text-white relative overflow-x-hidden min-h-screen bg-[#03050c]">
 
   <!-- Interactive 3D Real-Time Scrolling DNA Double Helix Canvas -->
   <canvas id="dnaCanvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
 
-  <!-- High-Contrast Vignette & Luminous Atmosphere -->
+  <!-- High-Contrast Atmospheric Glows -->
   <div class="fixed inset-0 pointer-events-none z-0 bg-[radial-gradient(ellipse_at_top,_rgba(0,246,255,0.08)_0%,_transparent_60%)]"></div>
-  <div class="fixed inset-0 pointer-events-none z-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(255,0,122,0.07)_0%,_transparent_60%)]"></div>
+  <div class="fixed inset-0 pointer-events-none z-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(255,0,122,0.08)_0%,_transparent_60%)]"></div>
 
   <!-- Right Edge Dynamic Scroll Indicator -->
   <div id="scrollProgressTrack">
     <div id="scrollProgressBar"></div>
   </div>
 
-  <!-- Top Navigation Header -->
-  <header class="sticky top-0 z-50 bg-[#040814]/90 backdrop-blur-xl border-b border-cyan-500/25">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 py-3 flex items-center justify-between">
+  <!-- ============================================================== -->
+  <!-- 1. STRICT BIOMETRIC SECURITY GATEWAY / PASSKEY PORTAL          -->
+  <!-- ============================================================== -->
+  <div id="loginScreen" class="fixed inset-0 z-[100] bg-[#03050c]/98 backdrop-blur-3xl flex items-center justify-center p-4 transition-all duration-700">
+    <div class="card-neon-cyan max-w-lg w-full p-6 sm:p-9 rounded-3xl relative overflow-hidden border-2 border-cyan-400/50 shadow-[0_0_60px_rgba(0,246,255,0.2)]">
       
-      <!-- Brand Logo -->
-      <div class="flex items-center space-x-3 cursor-pointer group" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-        <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-neonCyan via-neonViolet to-neonFuchsia p-[2px] shadow-glow-cyan group-hover:scale-105 transition duration-300">
-          <div class="w-full h-full bg-[#050814] rounded-[10px] flex items-center justify-center">
-            <i class="fa-solid fa-dna text-neonCyan text-xl group-hover:rotate-45 transition duration-500"></i>
-          </div>
+      <!-- Ambient Glow Orbs -->
+      <div class="absolute -top-24 -left-24 w-48 h-48 bg-neonCyan/20 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-24 -right-24 w-48 h-48 bg-neonFuchsia/20 rounded-full blur-3xl pointer-events-none"></div>
+
+      <!-- Holographic Dedicated Custom Badge -->
+      <div class="text-center mb-6">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-cyan-950 via-slate-900 to-pink-950 border border-cyan-400/50 shadow-glow-cyan mb-3.5">
+          <span class="w-2.5 h-2.5 rounded-full bg-neonCyan animate-ping"></span>
+          <span class="text-[11px] font-mono uppercase tracking-widest text-cyan-200 font-bold">Encrypted Biometric Terminal</span>
         </div>
-        <div>
-          <div class="flex items-center space-x-2">
-            <span class="font-display text-xl font-extrabold tracking-wider text-white">OMNI<span class="text-neonCyan">LOG</span></span>
-            <span class="text-[10px] font-mono font-bold uppercase tracking-widest px-2 py-0.5 rounded-full bg-cyan-500/20 text-neonCyan border border-cyan-400/50 shadow-glow-cyan">V2.4 HYPER</span>
+
+        <h1 class="text-2xl sm:text-3xl font-cyber font-extrabold text-white tracking-wider">
+          OMNILOG <span class="text-neonCyan">SECURE</span>
+        </h1>
+
+        <!-- High-Impact Saran Raj Custom Banner -->
+        <div class="mt-3.5 p-3.5 rounded-2xl bg-gradient-to-r from-amber-500/15 via-pink-500/15 to-cyan-500/15 border border-amber-400/40 shadow-glow-gold">
+          <p class="text-[11px] font-mono uppercase tracking-wider text-amber-300 font-bold mb-0.5">
+            <i class="fa-solid fa-certificate text-neonGold mr-1"></i> Dedicated Private System
+          </p>
+          <div class="text-base sm:text-lg font-cyber font-extrabold hologram-text">
+            Custom Built by Saran Raj &amp; for Saran Raj
           </div>
-          <p class="text-[10px] font-mono text-slate-300 tracking-wider hidden sm:block">Bio-Adaptive Career Genome Intelligence</p>
+          <p class="text-[10px] font-mono text-slate-300 mt-1">Authorized Access Only &bull; Clearance Verification Required</p>
         </div>
       </div>
 
-      <!-- Center Nav Links -->
-      <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 bg-slate-950/80 px-3 py-1.5 rounded-xl border border-white/10">
-        <a href="#input-section" class="px-3 py-1.5 text-xs font-semibold text-slate-200 hover:text-neonCyan hover:bg-white/5 rounded-lg transition flex items-center gap-1.5">
-          <i class="fa-solid fa-feather-pointed text-neonCyan"></i> Intake
-        </a>
-        <a href="#timeline-section" class="px-3 py-1.5 text-xs font-semibold text-slate-200 hover:text-neonFuchsia hover:bg-white/5 rounded-lg transition flex items-center gap-1.5">
-          <i class="fa-solid fa-timeline text-neonFuchsia"></i> Timeline
-        </a>
-        <a href="#feedback-section" class="px-3 py-1.5 text-xs font-semibold text-slate-200 hover:text-neonAmber hover:bg-white/5 rounded-lg transition flex items-center gap-1.5">
-          <i class="fa-solid fa-comments text-neonAmber"></i> Feedback
-        </a>
-        <a href="#skill-matrix-section" class="px-3 py-1.5 text-xs font-semibold text-slate-200 hover:text-neonEmerald hover:bg-white/5 rounded-lg transition flex items-center gap-1.5">
-          <i class="fa-solid fa-brain text-neonEmerald"></i> Skill Radar
-        </a>
-      </nav>
+      <!-- Biometric Scanner Simulated Visual -->
+      <div class="relative w-24 h-24 mx-auto mb-6 rounded-2xl bg-[#040814] border-2 border-cyan-400/40 flex flex-col items-center justify-center overflow-hidden shadow-glow-cyan">
+        <div class="scanner-line"></div>
+        <i class="fa-solid fa-fingerprint text-4xl text-neonCyan"></i>
+        <span class="text-[8px] font-mono font-bold uppercase tracking-wider text-cyan-300 mt-1.5">Bio-Gate Locked</span>
+      </div>
 
-      <!-- Right Action Items -->
-      <div class="flex items-center space-x-2 sm:space-x-3">
-        <!-- Palette & DNA Preset Switcher -->
-        <button id="dnaPaletteToggle" title="Cycle DNA Palette" class="px-3 py-1.5 rounded-xl text-xs font-mono font-semibold bg-[#0d162d] hover:bg-[#132042] text-neonCyan border border-cyan-400/40 shadow-glow-cyan flex items-center gap-1.5 transition active:scale-95">
-          <i class="fa-solid fa-palette text-neonCyan"></i>
-          <span class="hidden lg:inline text-[11px]" id="paletteLabel">Cyber Neon</span>
-        </button>
+      <!-- Passcode Form - Strictly Requires Valid Passkey -->
+      <form id="loginForm" class="space-y-4">
+        <div>
+          <label class="block text-xs font-mono font-bold text-cyan-300 mb-1.5 uppercase tracking-wider flex items-center justify-between">
+            <span>Terminal Passkey</span>
+            <span class="text-[10px] text-slate-400 font-mono"><i class="fa-solid fa-lock mr-1"></i>SHA-256 Verified</span>
+          </label>
+          <div class="relative">
+            <i class="fa-solid fa-key absolute left-3.5 top-3.5 text-xs text-cyan-400"></i>
+            <input type="password" id="loginPasscode" placeholder="Enter security passkey to decrypt..." autocomplete="off" class="w-full pl-10 pr-10 py-3 rounded-xl bg-[#050c1e] border border-cyan-500/40 text-white font-mono text-sm placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-neonCyan transition">
+            <button type="button" id="togglePassBtn" class="absolute right-3 top-3.5 text-slate-400 hover:text-white text-xs transition">
+              <i class="fa-regular fa-eye"></i>
+            </button>
+          </div>
+        </div>
 
-        <!-- Gemini API Key Button -->
-        <button id="openKeyModalBtn" class="px-3 py-1.5 rounded-xl text-xs font-mono font-semibold bg-[#1a1428] hover:bg-[#261d3b] text-neonAmber border border-amber-400/40 flex items-center gap-1.5 transition active:scale-95">
-          <i class="fa-solid fa-key text-neonAmber"></i>
-          <span class="hidden sm:inline" id="keyBtnLabel">Gemini Key</span>
-        </button>
+        <div id="loginFeedback" class="text-xs font-mono text-center min-h-[18px] text-slate-400">
+          Enter authorized passkey to unlock the terminal
+        </div>
 
-        <!-- Export Menu Trigger -->
-        <button id="quickExportBtn" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-sans bg-gradient-to-r from-neonCyan via-blue-600 to-neonFuchsia hover:opacity-95 text-white shadow-glow-cyan flex items-center gap-2 transition active:scale-95">
-          <i class="fa-solid fa-cloud-arrow-down"></i>
-          <span class="hidden sm:inline">Export & Sync</span>
-        </button>
+        <!-- Submit Button -->
+        <div class="pt-1">
+          <button type="submit" id="submitLoginBtn" class="w-full py-3 rounded-xl font-cyber font-bold text-xs uppercase tracking-widest bg-gradient-to-r from-neonCyan via-blue-600 to-neonFuchsia text-white shadow-glow-cyan hover:opacity-95 transition active:scale-95 flex items-center justify-center gap-2">
+            <i class="fa-solid fa-unlock-keyhole"></i>
+            <span>Authenticate Terminal</span>
+          </button>
+        </div>
+      </form>
+
+      <!-- Terminal Security Meta Footer -->
+      <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-[10px] font-mono text-slate-400">
+        <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield text-neonEmerald"></i> End-to-End Encrypted</span>
+        <span class="text-cyan-400/80">Saran Raj Work Genome</span>
       </div>
     </div>
-  </header>
+  </div>
 
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-8 pb-32 space-y-16">
-
-    <!-- Hero Showcase Section -->
-    <section class="relative pt-6 pb-4 text-center flex flex-col items-center justify-center">
-      <!-- Status Badge -->
-      <div class="inline-flex items-center space-x-2.5 px-4 py-1.5 rounded-full bg-cyan-950/80 border border-cyan-400/50 text-cyan-200 text-xs font-mono font-semibold mb-5 shadow-glow-cyan">
-        <span class="w-2.5 h-2.5 rounded-full bg-neonCyan animate-ping"></span>
-        <span class="tracking-wide">Interactive 3D DNA Helix Active &bull; Scroll to Accelerate Rotation</span>
-      </div>
-
-      <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight max-w-5xl title-gradient leading-[1.12]">
-        Transform Raw Work Into High-Impact Career DNA.
-      </h1>
-
-      <p class="mt-5 text-slate-200 max-w-3xl text-sm sm:text-base font-normal leading-relaxed">
-        Dump raw engineering tickets, code reviews, and meetings. OmniLog extracts quantifiable bullet rungs, fuses manager critique into strategic skill mutations, and arms you for rapid promotion.
-      </p>
-
-      <!-- Scroll Action Hint -->
-      <div class="mt-6 flex items-center gap-2 text-xs font-mono font-bold text-neonCyan animate-bounce">
-        <i class="fa-solid fa-angles-down"></i>
-        <span>Scroll to spin the Double Helix in real-time</span>
-      </div>
-
-      <!-- High-Contrast Vital Stats Ribbon -->
-      <div class="mt-10 grid grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-4xl">
-        <div class="card-neon-cyan p-4 rounded-2xl text-center">
-          <div class="flex items-center justify-center gap-2 mb-1">
-            <i class="fa-solid fa-database text-neonCyan text-xs"></i>
-            <span class="text-[11px] font-mono text-cyan-200 uppercase font-bold tracking-wider">Genome Logs</span>
+  <!-- ============================================================== -->
+  <!-- 2. MAIN DASHBOARD CONTENT (PROTECTED BEHIND GATE)               -->
+  <!-- ============================================================== -->
+  <div id="dashboardApp" class="relative z-10 hidden opacity-0 transition-opacity duration-500 pointer-events-none">
+    
+    <!-- Top Navigation Header -->
+    <header class="sticky top-0 z-50 bg-[#040814]/90 backdrop-blur-xl border-b border-cyan-500/25">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 py-3 flex items-center justify-between">
+        
+        <!-- Brand Logo & Saran Raj Tag -->
+        <div class="flex items-center space-x-3 cursor-pointer group" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-neonCyan via-neonViolet to-neonFuchsia p-[2px] shadow-glow-cyan group-hover:scale-105 transition duration-300">
+            <div class="w-full h-full bg-[#050814] rounded-[10px] flex items-center justify-center">
+              <i class="fa-solid fa-dna text-neonCyan text-xl group-hover:rotate-45 transition duration-500"></i>
+            </div>
           </div>
-          <div id="statTotalLogs" class="text-3xl font-extrabold font-display text-white cyan-glow-text mt-1">0</div>
-          <div class="text-[10px] text-slate-300 font-mono mt-1">Total recorded days</div>
+          <div>
+            <div class="flex items-center space-x-2">
+              <span class="font-display text-xl font-extrabold tracking-wider text-white">OMNI<span class="text-neonCyan">LOG</span></span>
+              <span class="text-[9px] font-mono font-bold uppercase tracking-widest px-2 py-0.5 rounded-full bg-cyan-500/20 text-neonCyan border border-cyan-400/50 shadow-glow-cyan">V2.5 HYPER</span>
+            </div>
+            <!-- Verified Badge -->
+            <div class="flex items-center gap-1.5 mt-0.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-neonGold animate-pulse"></span>
+              <span class="text-[10px] font-cyber font-bold hologram-text">SARAN RAJ TERMINAL</span>
+            </div>
+          </div>
         </div>
 
-        <div class="card-neon-fuchsia p-4 rounded-2xl text-center">
-          <div class="flex items-center justify-center gap-2 mb-1">
-            <i class="fa-solid fa-bolt text-neonFuchsia text-xs"></i>
-            <span class="text-[11px] font-mono text-pink-200 uppercase font-bold tracking-wider">Refined Rungs</span>
-          </div>
-          <div id="statRefinedBullets" class="text-3xl font-extrabold font-display text-neonFuchsia fuchsia-glow-text mt-1">0</div>
-          <div class="text-[10px] text-slate-300 font-mono mt-1">Executive impact bullets</div>
-        </div>
+        <!-- Center Nav Links -->
+        <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 bg-slate-950/80 px-3 py-1.5 rounded-xl border border-white/10">
+          <a href="#input-section" class="px-3 py-1.5 text-xs font-semibold text-slate-200 hover:text-neonCyan hover:bg-white/5 rounded-lg transition flex items-center gap-1.5">
+            <i class="fa-solid fa-feather-pointed text-neonCyan"></i> Intake
+          </a>
+          <a href="#timeline-section" class="px-3 py-1.5 text-xs font-semibold text-slate-200 hover:text-neonFuchsia hover:bg-white/5 rounded-lg transition flex items-center gap-1.5">
+            <i class="fa-solid fa-timeline text-neonFuchsia"></i> Timeline
+          </a>
+          <a href="#feedback-section" class="px-3 py-1.5 text-xs font-semibold text-slate-200 hover:text-neonAmber hover:bg-white/5 rounded-lg transition flex items-center gap-1.5">
+            <i class="fa-solid fa-comments text-neonAmber"></i> Feedback
+          </a>
+          <a href="#skill-matrix-section" class="px-3 py-1.5 text-xs font-semibold text-slate-200 hover:text-neonEmerald hover:bg-white/5 rounded-lg transition flex items-center gap-1.5">
+            <i class="fa-solid fa-brain text-neonEmerald"></i> Skill Radar
+          </a>
+        </nav>
 
-        <div class="card-neon-cyan p-4 rounded-2xl text-center" style="border-color: rgba(255, 183, 3, 0.4); box-shadow: 0 0 20px -6px rgba(255, 183, 3, 0.3);">
-          <div class="flex items-center justify-center gap-2 mb-1">
-            <i class="fa-solid fa-comments text-neonAmber text-xs"></i>
-            <span class="text-[11px] font-mono text-amber-200 uppercase font-bold tracking-wider">Manager Signals</span>
-          </div>
-          <div id="statFeedbackCount" class="text-3xl font-extrabold font-display text-neonAmber mt-1">0</div>
-          <div class="text-[10px] text-slate-300 font-mono mt-1">Constructive & praise inputs</div>
-        </div>
+        <!-- Right Action Items -->
+        <div class="flex items-center space-x-2 sm:space-x-3">
+          <!-- DNA Palette Switcher -->
+          <button id="dnaPaletteToggle" title="Cycle DNA Palette" class="px-3 py-1.5 rounded-xl text-xs font-mono font-semibold bg-[#0d162d] hover:bg-[#132042] text-neonCyan border border-cyan-400/40 shadow-glow-cyan flex items-center gap-1.5 transition active:scale-95">
+            <i class="fa-solid fa-palette text-neonCyan"></i>
+            <span class="hidden lg:inline text-[11px]" id="paletteLabel">Cyber Neon</span>
+          </button>
 
-        <div class="card-neon-emerald p-4 rounded-2xl text-center">
-          <div class="flex items-center justify-center gap-2 mb-1">
-            <i class="fa-solid fa-crosshairs text-neonEmerald text-xs"></i>
-            <span class="text-[11px] font-mono text-emerald-200 uppercase font-bold tracking-wider">Skill Readines</span>
-          </div>
-          <div id="statSkillsCount" class="text-3xl font-extrabold font-display text-neonEmerald mt-1">4 Active</div>
-          <div class="text-[10px] text-slate-300 font-mono mt-1">Competency vectors mapped</div>
-        </div>
-      </div>
-    </section>
+          <!-- Gemini API Key Button -->
+          <button id="openKeyModalBtn" class="px-3 py-1.5 rounded-xl text-xs font-mono font-semibold bg-[#1a1428] hover:bg-[#261d3b] text-neonAmber border border-amber-400/40 flex items-center gap-1.5 transition active:scale-95">
+            <i class="fa-solid fa-key text-neonAmber"></i>
+            <span class="hidden sm:inline" id="keyBtnLabel">Gemini Key</span>
+          </button>
 
-    <!-- Intake & Refinement Studio Section -->
-    <section id="input-section" class="scroll-mt-24 space-y-4">
-      <div class="flex items-center justify-between">
-        <div>
-          <h2 class="text-2xl font-display font-extrabold text-white flex items-center gap-2.5">
-            <span class="w-9 h-9 rounded-xl bg-cyan-500/20 text-neonCyan flex items-center justify-center text-base border border-cyan-400/50 shadow-glow-cyan">
-              <i class="fa-solid fa-feather-pointed"></i>
-            </span>
-            Raw Daily Log Intake & Synthesis
-          </h2>
-          <p class="text-xs sm:text-sm text-slate-300 mt-1">Dump conversational brain dumps, git commit messages, or meeting debriefs.</p>
+          <!-- Export Menu Trigger -->
+          <button id="quickExportBtn" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-sans bg-gradient-to-r from-neonCyan via-blue-600 to-neonFuchsia hover:opacity-95 text-white shadow-glow-cyan flex items-center gap-2 transition active:scale-95">
+            <i class="fa-solid fa-cloud-arrow-down"></i>
+            <span class="hidden sm:inline">Export</span>
+          </button>
+
+          <!-- Lock / Logout Button -->
+          <button id="logoutBtn" title="Lock Terminal" class="px-3 py-1.5 rounded-xl text-xs font-mono font-bold bg-rose-950/70 hover:bg-rose-900 text-rose-300 border border-rose-500/50 flex items-center gap-1.5 transition active:scale-95">
+            <i class="fa-solid fa-lock"></i>
+            <span class="hidden sm:inline">Lock</span>
+          </button>
         </div>
       </div>
+    </header>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        <!-- Input Form (Left 7 Cols) -->
-        <div class="lg:col-span-7 card-neon-cyan p-6 sm:p-7 rounded-2xl relative overflow-hidden">
-          <div class="space-y-4">
-            <!-- Row: Date & Category -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label class="block text-xs font-mono font-bold text-cyan-300 mb-1.5 uppercase tracking-wider">Date of Work</label>
-                <input type="date" id="logDate" class="w-full px-3.5 py-2.5 rounded-xl bg-[#070c1a] border border-cyan-500/40 text-white font-mono text-xs focus:ring-2 focus:ring-neonCyan focus:border-neonCyan focus:outline-none transition">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-32 space-y-16">
+
+      <!-- Hero Showcase Section with Saran Raj Banner -->
+      <section class="relative pt-4 pb-4 text-center flex flex-col items-center justify-center">
+        
+        <!-- Interactive DNA Scroll Acceleration Hint -->
+        <div class="inline-flex items-center space-x-2.5 px-4 py-1.5 rounded-full bg-cyan-950/80 border border-cyan-400/50 text-cyan-200 text-xs font-mono font-semibold mb-4 shadow-glow-cyan">
+          <span class="w-2.5 h-2.5 rounded-full bg-neonCyan animate-ping"></span>
+          <span class="tracking-wide">Real-Time 3D Double Helix Active &bull; Scroll to Accelerate Spin</span>
+        </div>
+
+        <!-- Grand Saran Raj Personalized Cyber Banner -->
+        <div class="mb-5 p-4 sm:p-5 rounded-3xl card-neon-gold max-w-4xl w-full relative overflow-hidden border-2 border-amber-400/50">
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-left">
+            <div class="flex items-center space-x-4">
+              <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-amber-400 via-pink-500 to-cyan-400 p-[2px] shadow-glow-gold">
+                <div class="w-full h-full bg-[#050814] rounded-[14px] flex items-center justify-center">
+                  <i class="fa-solid fa-crown text-neonGold text-2xl"></i>
+                </div>
               </div>
               <div>
-                <label class="block text-xs font-mono font-bold text-cyan-300 mb-1.5 uppercase tracking-wider">Primary Category</label>
-                <select id="logCategory" class="w-full px-3.5 py-2.5 rounded-xl bg-[#070c1a] border border-cyan-500/40 text-white text-xs font-semibold focus:ring-2 focus:ring-neonCyan focus:border-neonCyan focus:outline-none transition">
-                  <option value="Engineering">🛠️ Engineering & Architecture</option>
-                  <option value="Leadership">🎯 Leadership & Strategic Vision</option>
-                  <option value="Collaboration">🤝 Mentorship & Cross-Team</option>
-                  <option value="Design">🎨 Product Design & UX</option>
-                  <option value="DevOps">⚡ DevOps, SRE & Observability</option>
-                </select>
+                <div class="flex items-center gap-2">
+                  <span class="text-xs font-mono font-bold uppercase tracking-widest text-neonGold">Private Work Genome</span>
+                  <span class="px-2 py-0.5 rounded-full text-[9px] font-mono font-bold bg-amber-500/20 text-amber-200 border border-amber-400/40">VIP OPERATOR</span>
+                </div>
+                <div class="text-lg sm:text-2xl font-cyber font-extrabold hologram-text">
+                  Custom Built by Saran Raj &amp; for Saran Raj
+                </div>
+                <p class="text-xs text-slate-300 font-sans mt-0.5">
+                  High-velocity daily engineering log refiner, career timeline, and manager feedback synthesis.
+                </p>
               </div>
             </div>
 
-            <!-- Raw text area -->
-            <div>
-              <div class="flex items-center justify-between mb-1.5">
-                <label class="block text-xs font-mono font-bold text-slate-200 uppercase tracking-wider">
-                  Raw Stream of Consciousness
-                </label>
-                <button type="button" id="loadSampleBtn" class="text-xs font-mono font-semibold text-neonCyan hover:underline hover:text-white transition">
-                  + Load sample day
-                </button>
-              </div>
-              <textarea id="rawInput" rows="5" placeholder="e.g. fixed memory leak in ingestion worker service, rewrote cache serialization in Go, debugged redis timeout spike during 2pm incident, helped Sarah onboard auth SDK, felt stuck on docker compose permission bug..." class="w-full px-4 py-3 rounded-xl bg-[#040814] border border-cyan-500/30 text-white text-sm placeholder:text-slate-500 focus:ring-2 focus:ring-neonCyan focus:border-neonCyan focus:outline-none font-sans leading-relaxed"></textarea>
+            <div class="flex sm:flex-col items-center sm:items-end gap-2 shrink-0">
+              <span class="text-[10px] font-mono text-cyan-300 bg-cyan-950/80 px-2.5 py-1 rounded-lg border border-cyan-500/40">
+                <i class="fa-solid fa-circle-check text-neonCyan mr-1"></i> Authorized: Saran Raj
+              </span>
             </div>
+          </div>
+        </div>
 
-            <!-- Sentiment Pills & Action Button -->
-            <div class="flex flex-wrap items-center justify-between gap-3 pt-2">
-              <div class="flex items-center space-x-2">
-                <span class="text-xs font-mono font-semibold text-slate-300">Energy State:</span>
-                <div class="flex space-x-1.5" id="sentimentButtons">
-                  <button type="button" data-val="Super Productive" class="sentiment-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-950/60 text-emerald-300 border border-emerald-500/50 hover:bg-emerald-500/30 transition">🚀 High Flow</button>
-                  <button type="button" data-val="Steady Progress" class="sentiment-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-cyan-500/30 text-neonCyan border border-neonCyan shadow-glow-cyan transition">🌱 Steady</button>
-                  <button type="button" data-val="Blocked / Heavy" class="sentiment-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-rose-950/60 text-rose-300 border border-rose-500/50 hover:bg-rose-500/30 transition">🧗 Blocked</button>
+        <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight max-w-5xl leading-[1.12]">
+          Synthesize Daily Output Into Unstoppable Career DNA.
+        </h1>
+
+        <p class="mt-4 text-slate-200 max-w-3xl text-sm sm:text-base font-normal leading-relaxed">
+          Log raw unformatted thoughts, engineering pull requests, and meetings. Let OmniLog convert raw input streams into executive action rungs and map feedback into proactive skill growth.
+        </p>
+
+        <!-- High-Contrast Vital Stats Ribbon -->
+        <div class="mt-10 grid grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-4xl">
+          <div class="card-neon-cyan p-4 rounded-2xl text-center">
+            <div class="flex items-center justify-center gap-2 mb-1">
+              <i class="fa-solid fa-database text-neonCyan text-xs"></i>
+              <span class="text-[11px] font-mono text-cyan-200 uppercase font-bold tracking-wider">Genome Logs</span>
+            </div>
+            <div id="statTotalLogs" class="text-3xl font-extrabold font-display text-white mt-1">0</div>
+            <div class="text-[10px] text-slate-300 font-mono mt-1">Total recorded days</div>
+          </div>
+
+          <div class="card-neon-fuchsia p-4 rounded-2xl text-center">
+            <div class="flex items-center justify-center gap-2 mb-1">
+              <i class="fa-solid fa-bolt text-neonFuchsia text-xs"></i>
+              <span class="text-[11px] font-mono text-pink-200 uppercase font-bold tracking-wider">Refined Rungs</span>
+            </div>
+            <div id="statRefinedBullets" class="text-3xl font-extrabold font-display text-neonFuchsia mt-1">0</div>
+            <div class="text-[10px] text-slate-300 font-mono mt-1">Executive impact bullets</div>
+          </div>
+
+          <div class="card-neon-cyan p-4 rounded-2xl text-center" style="border-color: rgba(255, 183, 3, 0.4); box-shadow: 0 0 20px -6px rgba(255, 183, 3, 0.3);">
+            <div class="flex items-center justify-center gap-2 mb-1">
+              <i class="fa-solid fa-comments text-neonAmber text-xs"></i>
+              <span class="text-[11px] font-mono text-amber-200 uppercase font-bold tracking-wider">Feedback Signals</span>
+            </div>
+            <div id="statFeedbackCount" class="text-3xl font-extrabold font-display text-neonAmber mt-1">0</div>
+            <div class="text-[10px] text-slate-300 font-mono mt-1">Constructive &amp; praise notes</div>
+          </div>
+
+          <div class="card-neon-emerald p-4 rounded-2xl text-center">
+            <div class="flex items-center justify-center gap-2 mb-1">
+              <i class="fa-solid fa-crosshairs text-neonEmerald text-xs"></i>
+              <span class="text-[11px] font-mono text-emerald-200 uppercase font-bold tracking-wider">Skill Vectors</span>
+            </div>
+            <div id="statSkillsCount" class="text-3xl font-extrabold font-display text-neonEmerald mt-1">0 Ready</div>
+            <div class="text-[10px] text-slate-300 font-mono mt-1">Competencies mapped</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Intake & Refinement Studio Section -->
+      <section id="input-section" class="scroll-mt-24 space-y-4">
+        <div class="flex items-center justify-between">
+          <div>
+            <h2 class="text-2xl font-display font-extrabold text-white flex items-center gap-2.5">
+              <span class="w-9 h-9 rounded-xl bg-cyan-500/20 text-neonCyan flex items-center justify-center text-base border border-cyan-400/50 shadow-glow-cyan">
+                <i class="fa-solid fa-feather-pointed"></i>
+              </span>
+              Raw Daily Log Intake &amp; Synthesis
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-300 mt-1">Dump conversational notes, git commits, or architecture debates.</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <!-- Input Form (Left 7 Cols) -->
+          <div class="lg:col-span-7 card-neon-cyan p-6 sm:p-7 rounded-2xl relative overflow-hidden">
+            <div class="space-y-4">
+              <!-- Row: Date & Category -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-mono font-bold text-cyan-300 mb-1.5 uppercase tracking-wider">Date of Work</label>
+                  <input type="date" id="logDate" class="w-full px-3.5 py-2.5 rounded-xl bg-[#070c1a] border border-cyan-500/40 text-white font-mono text-xs focus:ring-2 focus:ring-neonCyan focus:border-neonCyan focus:outline-none transition">
+                </div>
+                <div>
+                  <label class="block text-xs font-mono font-bold text-cyan-300 mb-1.5 uppercase tracking-wider">Primary Category</label>
+                  <select id="logCategory" class="w-full px-3.5 py-2.5 rounded-xl bg-[#070c1a] border border-cyan-500/40 text-white text-xs font-semibold focus:ring-2 focus:ring-neonCyan focus:border-neonCyan focus:outline-none transition">
+                    <option value="Engineering">🛠️ Engineering &amp; Architecture</option>
+                    <option value="Leadership">🎯 Leadership &amp; Strategic Vision</option>
+                    <option value="Collaboration">🤝 Mentorship &amp; Cross-Team</option>
+                    <option value="Design">🎨 Product Design &amp; UX</option>
+                    <option value="DevOps">⚡ DevOps, SRE &amp; Observability</option>
+                  </select>
                 </div>
               </div>
 
-              <!-- Refine with Gemini AI Button -->
-              <button type="button" id="refineBtn" class="w-full sm:w-auto px-6 py-2.5 rounded-xl font-bold text-xs font-mono uppercase tracking-wider bg-gradient-to-r from-neonCyan via-blue-600 to-neonFuchsia text-white shadow-glow-cyan flex items-center justify-center gap-2 hover:opacity-95 transition transform active:scale-95">
-                <i class="fa-solid fa-wand-magic-sparkles text-sm"></i>
-                <span id="refineBtnText">Refine with Gemini AI</span>
+              <!-- Raw text area -->
+              <div>
+                <div class="flex items-center justify-between mb-1.5">
+                  <label class="block text-xs font-mono font-bold text-slate-200 uppercase tracking-wider">
+                    Raw Stream of Consciousness
+                  </label>
+                </div>
+                <textarea id="rawInput" rows="5" placeholder="e.g. resolved latency spikes in database connection pooling, refactored auth token verification, aligned with backend lead on queue architecture..." class="w-full px-4 py-3 rounded-xl bg-[#040814] border border-cyan-500/30 text-white text-sm placeholder:text-slate-500 focus:ring-2 focus:ring-neonCyan focus:border-neonCyan focus:outline-none font-sans leading-relaxed"></textarea>
+              </div>
+
+              <!-- Sentiment Pills & Action Button -->
+              <div class="flex flex-wrap items-center justify-between gap-3 pt-2">
+                <div class="flex items-center space-x-2">
+                  <span class="text-xs font-mono font-semibold text-slate-300">Energy State:</span>
+                  <div class="flex space-x-1.5" id="sentimentButtons">
+                    <button type="button" data-val="Super Productive" class="sentiment-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-950/60 text-emerald-300 border border-emerald-500/50 hover:bg-emerald-500/30 transition">🚀 High Flow</button>
+                    <button type="button" data-val="Steady Progress" class="sentiment-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-cyan-500/30 text-neonCyan border border-neonCyan shadow-glow-cyan transition">🌱 Steady</button>
+                    <button type="button" data-val="Blocked / Heavy" class="sentiment-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-rose-950/60 text-rose-300 border border-rose-500/50 hover:bg-rose-500/30 transition">🧗 Blocked</button>
+                  </div>
+                </div>
+
+                <!-- Refine with Gemini AI Button -->
+                <button type="button" id="refineBtn" class="w-full sm:w-auto px-6 py-2.5 rounded-xl font-bold text-xs font-mono uppercase tracking-wider bg-gradient-to-r from-neonCyan via-blue-600 to-neonFuchsia text-white shadow-glow-cyan flex items-center justify-center gap-2 hover:opacity-95 transition transform active:scale-95">
+                  <i class="fa-solid fa-wand-magic-sparkles text-sm"></i>
+                  <span id="refineBtnText">Refine with Gemini AI</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Refined Action Bullets Preview (Right 5 Cols) -->
+          <div class="lg:col-span-5 card-neon-fuchsia p-6 sm:p-7 rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3 border-b border-pink-500/20 pb-3">
+                <div class="flex items-center space-x-2">
+                  <span class="w-3 h-3 rounded-full bg-neonFuchsia shadow-glow-fuchsia animate-ping"></span>
+                  <h3 class="text-xs font-mono font-bold uppercase tracking-widest text-neonFuchsia">Refined Rung Bullets</h3>
+                </div>
+                <span class="text-xs font-mono font-bold text-pink-200 bg-pink-950/70 px-2 py-0.5 rounded-md border border-pink-500/40" id="bulletCountLabel">0 Bullets</span>
+              </div>
+
+              <p class="text-xs text-slate-300 mb-3">Click directly inside any bullet to tweak wording or insert metrics before committing.</p>
+
+              <!-- Dynamic bullet list container -->
+              <div id="refinedBulletsContainer" class="space-y-3 min-h-[170px] max-h-[260px] overflow-y-auto pr-1">
+                <div class="p-6 border border-dashed border-pink-500/40 rounded-xl text-center flex flex-col items-center justify-center text-slate-300 text-xs">
+                  <i class="fa-solid fa-dna text-neonFuchsia text-2xl mb-2 animate-bounce"></i>
+                  Enter raw thoughts on the left and click "Refine with Gemini AI" to synthesize executive bullets.
+                </div>
+              </div>
+
+              <button type="button" id="addNewBulletBtn" class="mt-3 text-xs font-mono font-bold text-neonCyan hover:text-white flex items-center gap-1.5 transition">
+                <i class="fa-solid fa-plus-circle text-neonCyan"></i> Add custom bullet rung
+              </button>
+            </div>
+
+            <!-- Commit Bar -->
+            <div class="mt-5 pt-4 border-t border-white/10 flex items-center justify-between">
+              <button type="button" id="clearFormBtn" class="text-xs font-semibold text-slate-400 hover:text-rose-400 transition">
+                <i class="fa-solid fa-trash-can mr-1"></i> Discard
+              </button>
+              <button type="button" id="saveLogBtn" class="px-6 py-2.5 rounded-xl text-xs font-bold font-mono uppercase tracking-wider bg-emerald-500 hover:bg-emerald-400 text-slate-950 shadow-glow-emerald flex items-center gap-2 transition active:scale-95">
+                <i class="fa-solid fa-floppy-disk"></i> Commit to Timeline
               </button>
             </div>
           </div>
         </div>
+      </section>
 
-        <!-- Refined Action Bullets Preview (Right 5 Cols) -->
-        <div class="lg:col-span-5 card-neon-fuchsia p-6 sm:p-7 rounded-2xl flex flex-col justify-between">
+      <!-- Work Log Timeline Section -->
+      <section id="timeline-section" class="scroll-mt-24 space-y-6">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-cyan-500/20 pb-4">
           <div>
-            <div class="flex items-center justify-between mb-3 border-b border-pink-500/20 pb-3">
-              <div class="flex items-center space-x-2">
-                <span class="w-3 h-3 rounded-full bg-neonFuchsia shadow-glow-fuchsia animate-ping"></span>
-                <h3 class="text-xs font-mono font-bold uppercase tracking-widest text-neonFuchsia">Refined Rung Bullets</h3>
-              </div>
-              <span class="text-xs font-mono font-bold text-pink-200 bg-pink-950/70 px-2 py-0.5 rounded-md border border-pink-500/40" id="bulletCountLabel">0 Bullets</span>
-            </div>
-
-            <p class="text-xs text-slate-300 mb-3">Click directly inside any bullet to edit phrasing or insert quantified metrics before committing to your timeline.</p>
-
-            <!-- Dynamic bullet list container -->
-            <div id="refinedBulletsContainer" class="space-y-3 min-h-[170px] max-h-[260px] overflow-y-auto pr-1">
-              <div class="p-6 border border-dashed border-pink-500/40 rounded-xl text-center flex flex-col items-center justify-center text-slate-300 text-xs">
-                <i class="fa-solid fa-dna text-neonFuchsia text-2xl mb-2 animate-bounce"></i>
-                Enter raw work notes on the left and click "Refine with Gemini AI" to create executive bullet rungs.
-              </div>
-            </div>
-
-            <button type="button" id="addNewBulletBtn" class="mt-3 text-xs font-mono font-bold text-neonCyan hover:text-white flex items-center gap-1.5 transition">
-              <i class="fa-solid fa-plus-circle text-neonCyan"></i> Add custom bullet rung
-            </button>
+            <h2 class="text-2xl font-display font-extrabold text-white flex items-center gap-2.5">
+              <span class="w-9 h-9 rounded-xl bg-neonCyan/20 text-neonCyan flex items-center justify-center text-base border border-neonCyan/50 shadow-glow-cyan">
+                <i class="fa-solid fa-timeline"></i>
+              </span>
+              Work Log Timeline
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-300 mt-1">Chronological record of Saran Raj's accomplishments, locked to the double helix spine.</p>
           </div>
 
-          <!-- Commit Bar -->
-          <div class="mt-5 pt-4 border-t border-white/10 flex items-center justify-between">
-            <button type="button" id="clearFormBtn" class="text-xs font-semibold text-slate-400 hover:text-rose-400 transition">
-              <i class="fa-solid fa-trash-can mr-1"></i> Discard
-            </button>
-            <button type="button" id="saveLogBtn" class="px-6 py-2.5 rounded-xl text-xs font-bold font-mono uppercase tracking-wider bg-emerald-500 hover:bg-emerald-400 text-slate-950 shadow-glow-emerald flex items-center gap-2 transition active:scale-95">
-              <i class="fa-solid fa-floppy-disk"></i> Commit to Timeline
+          <!-- Filter and Search controls -->
+          <div class="flex flex-wrap items-center gap-2.5">
+            <div class="relative">
+              <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-xs text-cyan-400"></i>
+              <input type="text" id="timelineSearch" placeholder="Search keywords..." class="pl-8 pr-3 py-2 rounded-xl bg-[#060c1d] border border-cyan-500/40 text-xs font-medium text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-neonCyan w-48">
+            </div>
+            <select id="categoryFilter" class="px-3.5 py-2 rounded-xl bg-[#060c1d] border border-cyan-500/40 text-xs font-semibold text-white focus:outline-none focus:ring-2 focus:ring-neonCyan">
+              <option value="ALL">All Categories</option>
+              <option value="Engineering">Engineering</option>
+              <option value="Leadership">Leadership</option>
+              <option value="Collaboration">Collaboration</option>
+              <option value="Design">Design</option>
+              <option value="DevOps">DevOps</option>
+            </select>
+            <button id="sortOrderToggleBtn" class="px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-xs font-mono font-bold text-neonCyan border border-cyan-500/40 flex items-center gap-1.5 transition">
+              <i class="fa-solid fa-arrow-down-short-wide text-neonCyan"></i>
+              <span id="sortOrderLabel">Newest First</span>
             </button>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Work Log Timeline Section -->
-    <section id="timeline-section" class="scroll-mt-24 space-y-6">
-      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-cyan-500/20 pb-4">
-        <div>
-          <h2 class="text-2xl font-display font-extrabold text-white flex items-center gap-2.5">
-            <span class="w-9 h-9 rounded-xl bg-neonCyan/20 text-neonCyan flex items-center justify-center text-base border border-neonCyan/50 shadow-glow-cyan">
-              <i class="fa-solid fa-timeline"></i>
-            </span>
-            Work Log Timeline
-          </h2>
-          <p class="text-xs sm:text-sm text-slate-300 mt-1">Chronological record of your accomplishments, linked with the real-time helix spine.</p>
-        </div>
-
-        <!-- Filter and Search controls -->
-        <div class="flex flex-wrap items-center gap-2.5">
-          <div class="relative">
-            <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-xs text-cyan-400"></i>
-            <input type="text" id="timelineSearch" placeholder="Search keywords..." class="pl-8 pr-3 py-2 rounded-xl bg-[#060c1d] border border-cyan-500/40 text-xs font-medium text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-neonCyan w-48">
+        <!-- Timeline Main Grid -->
+        <div class="relative">
+          <div class="hidden sm:block absolute left-8 top-6 bottom-6 w-1 bg-gradient-to-b from-neonCyan via-neonFuchsia to-neonEmerald shadow-glow-cyan opacity-50"></div>
+          <div id="timelineContainer" class="space-y-6">
+            <!-- Populated dynamically via JS -->
           </div>
-          <select id="categoryFilter" class="px-3.5 py-2 rounded-xl bg-[#060c1d] border border-cyan-500/40 text-xs font-semibold text-white focus:outline-none focus:ring-2 focus:ring-neonCyan">
-            <option value="ALL">All Categories</option>
-            <option value="Engineering">Engineering</option>
-            <option value="Leadership">Leadership</option>
-            <option value="Collaboration">Collaboration</option>
-            <option value="Design">Design</option>
-            <option value="DevOps">DevOps</option>
-          </select>
-          <button id="sortOrderToggleBtn" class="px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-xs font-mono font-bold text-neonCyan border border-cyan-500/40 flex items-center gap-1.5 transition">
-            <i class="fa-solid fa-arrow-down-short-wide text-neonCyan"></i>
-            <span id="sortOrderLabel">Newest First</span>
-          </button>
         </div>
-      </div>
+      </section>
 
-      <!-- Timeline Main Grid -->
-      <div class="relative">
-        <!-- Glowing Vertical Helix Connector Strand -->
-        <div class="hidden sm:block absolute left-8 top-6 bottom-6 w-1 bg-gradient-to-b from-neonCyan via-neonFuchsia to-neonEmerald shadow-glow-cyan opacity-50"></div>
-
-        <!-- Dynamic Timeline Item Cards -->
-        <div id="timelineContainer" class="space-y-6">
-          <!-- Populated by JavaScript -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Manager & Team Feedback Section -->
-    <section id="feedback-section" class="scroll-mt-24 space-y-6">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-pink-500/20 pb-4">
-        <div>
-          <h2 class="text-2xl font-display font-extrabold text-white flex items-center gap-2.5">
-            <span class="w-9 h-9 rounded-xl bg-neonAmber/20 text-neonAmber flex items-center justify-center text-base border border-neonAmber/50 shadow-glow-amber">
-              <i class="fa-solid fa-comments"></i>
-            </span>
-            Manager & Team Feedback Tracker
-          </h2>
-          <p class="text-xs sm:text-sm text-slate-300 mt-1">Log feedback signals from 1-on-1s and code reviews to feed the AI competency evolution matrix.</p>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        <!-- New Feedback Form (5 Cols) -->
-        <div class="lg:col-span-5 card-neon-fuchsia p-6 sm:p-7 rounded-2xl space-y-4">
-          <h3 class="text-xs font-mono font-bold uppercase tracking-widest text-neonFuchsia flex items-center gap-2">
-            <i class="fa-solid fa-plus-circle"></i> Log Feedback Signal
-          </h3>
-
-          <div class="grid grid-cols-2 gap-3">
-            <div>
-              <label class="block text-xs font-mono font-bold text-pink-200 mb-1 uppercase tracking-wider">Source / Reviewer</label>
-              <input type="text" id="feedbackSource" placeholder="e.g. Sarah (Eng Director)" class="w-full px-3.5 py-2.5 rounded-xl bg-[#090514] border border-pink-500/40 text-xs font-semibold text-white focus:outline-none focus:ring-2 focus:ring-neonFuchsia">
-            </div>
-            <div>
-              <label class="block text-xs font-mono font-bold text-pink-200 mb-1 uppercase tracking-wider">Feedback Type</label>
-              <select id="feedbackType" class="w-full px-3.5 py-2.5 rounded-xl bg-[#090514] border border-pink-500/40 text-xs font-semibold text-white focus:outline-none focus:ring-2 focus:ring-neonFuchsia">
-                <option value="Constructive">🔧 Constructive Growth</option>
-                <option value="Praise">⭐ Praise & Recognition</option>
-                <option value="Technical">💻 Tech / Architecture Bar</option>
-                <option value="SoftSkill">🗣️ Communication / Alignment</option>
-              </select>
-            </div>
-          </div>
-
+      <!-- Manager & Team Feedback Section -->
+      <section id="feedback-section" class="scroll-mt-24 space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-pink-500/20 pb-4">
           <div>
-            <label class="block text-xs font-mono font-bold text-pink-200 mb-1 uppercase tracking-wider">Feedback Content & Expectations</label>
-            <textarea id="feedbackText" rows="4" placeholder="e.g. Delivered the payment migration ahead of schedule. However, in future sprints, ensure RFCs are published at least 48h prior to sprint review so platform team has visibility." class="w-full px-4 py-3 rounded-xl bg-[#090514] border border-pink-500/40 text-xs text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-neonFuchsia leading-relaxed"></textarea>
-          </div>
-
-          <div class="flex items-center justify-between pt-2">
-            <span class="text-[11px] font-mono text-slate-300">Auto-saved to localStorage</span>
-            <button type="button" id="saveFeedbackBtn" class="px-5 py-2.5 rounded-xl text-xs font-mono font-bold uppercase tracking-wider bg-gradient-to-r from-neonViolet to-neonFuchsia hover:opacity-95 text-white shadow-glow-fuchsia flex items-center gap-2 transition active:scale-95">
-              <i class="fa-solid fa-floppy-disk"></i> Record Feedback
-            </button>
+            <h2 class="text-2xl font-display font-extrabold text-white flex items-center gap-2.5">
+              <span class="w-9 h-9 rounded-xl bg-neonAmber/20 text-neonAmber flex items-center justify-center text-base border border-neonAmber/50 shadow-glow-amber">
+                <i class="fa-solid fa-comments"></i>
+              </span>
+              Manager &amp; Team Feedback Tracker
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-300 mt-1">Capture critiques and reviews to power your targeted AI skill development plan.</p>
           </div>
         </div>
 
-        <!-- Feedback Log List (7 Cols) -->
-        <div class="lg:col-span-7 card-neon-neutral p-6 sm:p-7 rounded-2xl flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between mb-4 border-b border-white/10 pb-3">
-              <h3 class="text-xs font-mono font-bold uppercase tracking-widest text-white">Feedback History Signals</h3>
-              <span id="feedbackCountBadge" class="text-xs font-mono font-bold px-2.5 py-0.5 rounded-full bg-pink-500/20 text-pink-300 border border-pink-400/50 shadow-glow-fuchsia">0 entries</span>
-            </div>
-
-            <div id="feedbackListContainer" class="space-y-3 max-h-[340px] overflow-y-auto pr-1">
-              <!-- Rendered via JS -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- AI Skill Gap & Career Evolution Matrix -->
-    <section id="skill-matrix-section" class="scroll-mt-24 space-y-6">
-      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-emerald-500/20 pb-4">
-        <div>
-          <h2 class="text-2xl font-display font-extrabold text-white flex items-center gap-2.5">
-            <span class="w-9 h-9 rounded-xl bg-neonEmerald/20 text-neonEmerald flex items-center justify-center text-base border border-neonEmerald/50 shadow-glow-emerald">
-              <i class="fa-solid fa-brain"></i>
-            </span>
-            AI Skill Intelligence & Career Gap Radar
-          </h2>
-          <p class="text-xs sm:text-sm text-slate-300 mt-1">Cross-references your daily output against manager critiques to prescribe 30-day micro-sprints.</p>
-        </div>
-
-        <button type="button" id="analyzeSkillsBtn" class="px-6 py-2.5 rounded-xl font-mono font-bold text-xs uppercase tracking-wider bg-gradient-to-r from-emerald-500 via-teal-500 to-neonCyan text-slate-950 shadow-glow-emerald flex items-center gap-2 hover:opacity-95 transition active:scale-95">
-          <i class="fa-solid fa-microchip"></i>
-          <span id="analyzeSkillsBtnText">Analyze Skills & Feedback</span>
-        </button>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        <!-- Skill Recommendations Radar (8 cols) -->
-        <div class="lg:col-span-8 card-neon-emerald p-6 sm:p-7 rounded-2xl space-y-6">
-          <div class="flex items-center justify-between border-b border-emerald-500/20 pb-3">
-            <h3 class="text-xs font-mono font-bold uppercase tracking-widest text-neonEmerald flex items-center gap-2">
-              <i class="fa-solid fa-bolt text-neonCyan"></i> Recommended Competency Vectors
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <!-- New Feedback Form (5 Cols) -->
+          <div class="lg:col-span-5 card-neon-fuchsia p-6 sm:p-7 rounded-2xl space-y-4">
+            <h3 class="text-xs font-mono font-bold uppercase tracking-widest text-neonFuchsia flex items-center gap-2">
+              <i class="fa-solid fa-plus-circle"></i> Log Feedback Signal
             </h3>
-            <span class="text-xs font-mono font-bold text-slate-300" id="skillStatusTimestamp">Awaiting Analysis</span>
+
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-mono font-bold text-pink-200 mb-1 uppercase tracking-wider">Source / Reviewer</label>
+                <input type="text" id="feedbackSource" placeholder="e.g. Manager, Lead, Peer" class="w-full px-3.5 py-2.5 rounded-xl bg-[#090514] border border-pink-500/40 text-xs font-semibold text-white focus:outline-none focus:ring-2 focus:ring-neonFuchsia">
+              </div>
+              <div>
+                <label class="block text-xs font-mono font-bold text-pink-200 mb-1 uppercase tracking-wider">Feedback Type</label>
+                <select id="feedbackType" class="w-full px-3.5 py-2.5 rounded-xl bg-[#090514] border border-pink-500/40 text-xs font-semibold text-white focus:outline-none focus:ring-2 focus:ring-neonFuchsia">
+                  <option value="Constructive">🔧 Constructive Growth</option>
+                  <option value="Praise">⭐ Praise &amp; Recognition</option>
+                  <option value="Technical">💻 Tech / Architecture Bar</option>
+                  <option value="SoftSkill">🗣️ Communication / Alignment</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-mono font-bold text-pink-200 mb-1 uppercase tracking-wider">Feedback Content &amp; Expectations</label>
+              <textarea id="feedbackText" rows="4" placeholder="Enter specific feedback received from your manager or team..." class="w-full px-4 py-3 rounded-xl bg-[#090514] border border-pink-500/40 text-xs text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-neonFuchsia leading-relaxed"></textarea>
+            </div>
+
+            <div class="flex items-center justify-between pt-2">
+              <span class="text-[11px] font-mono text-slate-300">Protected in localStorage</span>
+              <button type="button" id="saveFeedbackBtn" class="px-5 py-2.5 rounded-xl text-xs font-mono font-bold uppercase tracking-wider bg-gradient-to-r from-neonViolet to-neonFuchsia hover:opacity-95 text-white shadow-glow-fuchsia flex items-center gap-2 transition active:scale-95">
+                <i class="fa-solid fa-floppy-disk"></i> Record Feedback
+              </button>
+            </div>
           </div>
 
-          <div id="skillsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <!-- Dynamic skill cards inserted by JS -->
-          </div>
+          <!-- Feedback Log List (7 Cols) -->
+          <div class="lg:col-span-7 card-neon-neutral p-6 sm:p-7 rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4 border-b border-white/10 pb-3">
+                <h3 class="text-xs font-mono font-bold uppercase tracking-widest text-white">Feedback History Signals</h3>
+                <span id="feedbackCountBadge" class="text-xs font-mono font-bold px-2.5 py-0.5 rounded-full bg-pink-500/20 text-pink-300 border border-pink-400/50 shadow-glow-fuchsia">0 entries</span>
+              </div>
 
-          <!-- 30-Day Actionable Action Plan -->
-          <div class="pt-4 border-t border-emerald-500/20">
-            <h4 class="text-xs font-mono font-bold uppercase tracking-widest text-white mb-3 flex items-center gap-2">
-              <i class="fa-solid fa-bullseye text-neonFuchsia"></i> Actionable 30-Day Evolution Sprints
-            </h4>
-            <div id="actionPlanContainer" class="space-y-2.5">
-              <p class="text-xs text-slate-400 italic">No micro-sprints formulated yet. Analyze your logs to trigger recommendations.</p>
+              <div id="feedbackListContainer" class="space-y-3 max-h-[340px] overflow-y-auto pr-1">
+                <!-- Rendered via JS -->
+              </div>
             </div>
           </div>
         </div>
+      </section>
 
-        <!-- Feedback-to-Skill Gap Bridge (4 cols) -->
-        <div class="lg:col-span-4 card-neon-neutral p-6 sm:p-7 rounded-2xl flex flex-col justify-between">
+      <!-- AI Skill Gap & Career Evolution Matrix -->
+      <section id="skill-matrix-section" class="scroll-mt-24 space-y-6">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-emerald-500/20 pb-4">
           <div>
-            <h3 class="text-xs font-mono font-bold uppercase tracking-widest text-pink-300 mb-2 flex items-center gap-2">
-              <i class="fa-solid fa-crosshairs text-neonFuchsia"></i> Feedback Gap Mapping
-            </h3>
-            <p class="text-xs text-slate-300 mb-4">Direct correlation between constructive reviewer remarks and target skill adaptations.</p>
+            <h2 class="text-2xl font-display font-extrabold text-white flex items-center gap-2.5">
+              <span class="w-9 h-9 rounded-xl bg-neonEmerald/20 text-neonEmerald flex items-center justify-center text-base border border-neonEmerald/50 shadow-glow-emerald">
+                <i class="fa-solid fa-brain"></i>
+              </span>
+              AI Skill Intelligence &amp; Career Gap Radar
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-300 mt-1">Cross-references Saran Raj's daily output against feedback to formulate 30-day advancement sprints.</p>
+          </div>
 
-            <div id="gapMappingList" class="space-y-3">
-              <!-- Populated by JS -->
+          <button type="button" id="analyzeSkillsBtn" class="px-6 py-2.5 rounded-xl font-mono font-bold text-xs uppercase tracking-wider bg-gradient-to-r from-emerald-500 via-teal-500 to-neonCyan text-slate-950 shadow-glow-emerald flex items-center gap-2 hover:opacity-95 transition active:scale-95">
+            <i class="fa-solid fa-microchip"></i>
+            <span id="analyzeSkillsBtnText">Synthesize Saran's Skills</span>
+          </button>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <!-- Skill Recommendations Radar (8 cols) -->
+          <div class="lg:col-span-8 card-neon-emerald p-6 sm:p-7 rounded-2xl space-y-6">
+            <div class="flex items-center justify-between border-b border-emerald-500/20 pb-3">
+              <h3 class="text-xs font-mono font-bold uppercase tracking-widest text-neonEmerald flex items-center gap-2">
+                <i class="fa-solid fa-bolt text-neonCyan"></i> Recommended Competency Vectors
+              </h3>
+              <span class="text-xs font-mono font-bold text-slate-300" id="skillStatusTimestamp">Awaiting Analysis</span>
+            </div>
+
+            <div id="skillsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <!-- Dynamic skill cards inserted by JS -->
+            </div>
+
+            <!-- 30-Day Actionable Action Plan -->
+            <div class="pt-4 border-t border-emerald-500/20">
+              <h4 class="text-xs font-mono font-bold uppercase tracking-widest text-white mb-3 flex items-center gap-2">
+                <i class="fa-solid fa-bullseye text-neonFuchsia"></i> Actionable 30-Day Evolution Sprints
+              </h4>
+              <div id="actionPlanContainer" class="space-y-2.5">
+                <p class="text-xs text-slate-400 italic">No micro-sprints formulated yet. Analyze logs to trigger recommendations.</p>
+              </div>
             </div>
           </div>
 
-          <div class="mt-6 p-4 rounded-xl bg-cyan-950/70 border border-cyan-400/40 text-xs text-slate-200">
-            <div class="flex items-center gap-2 font-bold text-neonCyan mb-1">
-              <i class="fa-solid fa-lightbulb"></i> 1-on-1 Promotion Strategy
+          <!-- Feedback-to-Skill Gap Bridge (4 cols) -->
+          <div class="lg:col-span-4 card-neon-neutral p-6 sm:p-7 rounded-2xl flex flex-col justify-between">
+            <div>
+              <h3 class="text-xs font-mono font-bold uppercase tracking-widest text-pink-300 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-crosshairs text-neonFuchsia"></i> Feedback Gap Mapping
+              </h3>
+              <p class="text-xs text-slate-300 mb-4">Direct correlation between reviewer remarks and target skill adaptations.</p>
+
+              <div id="gapMappingList" class="space-y-3">
+                <!-- Populated by JS -->
+              </div>
             </div>
-            Export your timeline as Markdown before meeting your manager to present concrete proof of self-correction.
+
+            <div class="mt-6 p-4 rounded-xl bg-cyan-950/70 border border-cyan-400/40 text-xs text-slate-200">
+              <div class="flex items-center gap-2 font-bold text-neonCyan mb-1">
+                <i class="fa-solid fa-lightbulb"></i> 1-on-1 Promotion Strategy
+              </div>
+              Export your timeline as Markdown before meeting your manager to present concrete proof of self-correction.
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Export & Backup Modal -->
-    <div id="exportModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-4">
-      <div class="card-neon-cyan p-6 sm:p-8 rounded-2xl max-w-xl w-full border border-cyan-400 shadow-2xl relative">
-        <button id="closeExportModal" class="absolute top-4 right-4 text-slate-400 hover:text-white transition">
-          <i class="fa-solid fa-xmark text-lg"></i>
+      <!-- Saran Raj Dedicated Footer -->
+      <footer class="pt-12 border-t border-white/10 text-center space-y-4">
+        <div class="inline-flex items-center gap-2 px-5 py-2 rounded-2xl bg-[#080e22] border border-amber-400/40 shadow-glow-gold">
+          <i class="fa-solid fa-award text-neonGold text-sm"></i>
+          <span class="text-xs font-cyber font-bold hologram-text">Custom Built by Saran Raj &amp; for Saran Raj</span>
+        </div>
+        <p class="text-xs font-mono text-slate-400">
+          OmniLog AI Genome Engine &bull; Private Encrypted Session &bull; Protected by Saran Raj Biometric Protocol
+        </p>
+      </footer>
+    </main>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- 3. MODALS (EXPORT & GEMINI KEY CONFIGURATION)                   -->
+  <!-- ============================================================== -->
+
+  <!-- Export & Backup Modal -->
+  <div id="exportModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <div class="card-neon-cyan p-6 sm:p-8 rounded-2xl max-w-xl w-full border border-cyan-400 shadow-2xl relative">
+      <button id="closeExportModal" class="absolute top-4 right-4 text-slate-400 hover:text-white transition">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+
+      <h3 class="text-xl font-display font-extrabold text-white flex items-center gap-2 mb-1">
+        <i class="fa-solid fa-cloud-arrow-down text-neonCyan"></i> Export &amp; Backup Career Genome
+      </h3>
+      <p class="text-xs text-slate-300 mb-6">Export Saran Raj's complete genome record for 1-on-1 performance reviews or safe backups.</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+        <button id="exportJsonBtn" class="p-4 rounded-xl bg-[#050c1e] hover:bg-[#091533] border border-cyan-500/40 text-left transition group">
+          <div class="w-8 h-8 rounded-lg bg-cyan-500/20 text-neonCyan flex items-center justify-center mb-2 group-hover:scale-110 transition">
+            <i class="fa-solid fa-file-code"></i>
+          </div>
+          <div class="text-xs font-bold text-white">Full JSON Backup</div>
+          <div class="text-[11px] text-slate-300 mt-1">Export complete raw + refined logs, feedback, and skills.</div>
         </button>
 
-        <h3 class="text-xl font-display font-extrabold text-white flex items-center gap-2 mb-1">
-          <i class="fa-solid fa-cloud-arrow-down text-neonCyan"></i> Export & Backup Career Genome
-        </h3>
-        <p class="text-xs text-slate-300 mb-6">Select a format to preserve your logs or take them to your 1-on-1 performance review.</p>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-          <button id="exportJsonBtn" class="p-4 rounded-xl bg-[#050c1e] hover:bg-[#091533] border border-cyan-500/40 text-left transition group">
-            <div class="w-8 h-8 rounded-lg bg-cyan-500/20 text-neonCyan flex items-center justify-center mb-2 group-hover:scale-110 transition">
-              <i class="fa-solid fa-file-code"></i>
-            </div>
-            <div class="text-xs font-bold text-white">Full JSON Backup</div>
-            <div class="text-[11px] text-slate-300 mt-1">Export complete raw + refined logs and manager feedback.</div>
-          </button>
-
-          <button id="exportMarkdownBtn" class="p-4 rounded-xl bg-[#14081c] hover:bg-[#200c2d] border border-pink-500/40 text-left transition group">
-            <div class="w-8 h-8 rounded-lg bg-pink-500/20 text-neonFuchsia flex items-center justify-center mb-2 group-hover:scale-110 transition">
-              <i class="fa-solid fa-file-lines"></i>
-            </div>
-            <div class="text-xs font-bold text-white">Markdown 1-on-1 Prep</div>
-            <div class="text-[11px] text-slate-300 mt-1">Formatted document perfect for Notion, Obsidian, or Google Docs.</div>
-          </button>
-
-          <button id="exportCsvBtn" class="p-4 rounded-xl bg-[#071612] hover:bg-[#0b241e] border border-emerald-500/40 text-left transition group">
-            <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-neonEmerald flex items-center justify-center mb-2 group-hover:scale-110 transition">
-              <i class="fa-solid fa-file-excel"></i>
-            </div>
-            <div class="text-xs font-bold text-white">CSV Spreadsheet</div>
-            <div class="text-[11px] text-slate-300 mt-1">Tabular format for Google Sheets or Excel performance logging.</div>
-          </button>
-
-          <label class="p-4 rounded-xl bg-[#0c0d1e] hover:bg-[#141633] border border-violet-500/40 text-left transition group cursor-pointer block">
-            <div class="w-8 h-8 rounded-lg bg-violet-500/20 text-neonViolet flex items-center justify-center mb-2 group-hover:scale-110 transition">
-              <i class="fa-solid fa-upload"></i>
-            </div>
-            <div class="text-xs font-bold text-white">Import JSON Backup</div>
-            <div class="text-[11px] text-slate-300 mt-1">Restore your logs from any previous OmniLog export.</div>
-            <input type="file" id="importJsonFileInput" accept=".json" class="hidden">
-          </label>
-        </div>
-
-        <div class="flex items-center justify-between text-xs text-slate-300 border-t border-white/10 pt-4">
-          <span>All data remains safe in your browser's localStorage.</span>
-          <button id="copyMdToClipboardBtn" class="text-neonCyan hover:underline font-bold flex items-center gap-1">
-            <i class="fa-regular fa-copy"></i> Copy MD to Clipboard
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Gemini Key Config Modal -->
-    <div id="keyModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-4">
-      <div class="card-neon-neutral p-6 sm:p-8 rounded-2xl max-w-md w-full border border-amber-400/60 shadow-2xl relative">
-        <button id="closeKeyModal" class="absolute top-4 right-4 text-slate-400 hover:text-white transition">
-          <i class="fa-solid fa-xmark text-lg"></i>
+        <button id="exportMarkdownBtn" class="p-4 rounded-xl bg-[#14081c] hover:bg-[#200c2d] border border-pink-500/40 text-left transition group">
+          <div class="w-8 h-8 rounded-lg bg-pink-500/20 text-neonFuchsia flex items-center justify-center mb-2 group-hover:scale-110 transition">
+            <i class="fa-solid fa-file-lines"></i>
+          </div>
+          <div class="text-xs font-bold text-white">Markdown 1-on-1 Prep</div>
+          <div class="text-[11px] text-slate-300 mt-1">Formatted document ready for Notion, Obsidian, or Google Docs.</div>
         </button>
 
-        <h3 class="text-xl font-display font-extrabold text-white flex items-center gap-2 mb-1">
-          <i class="fa-solid fa-key text-neonAmber"></i> Gemini API Key
-        </h3>
-        <p class="text-xs text-slate-300 mb-4">Provide your Google Gemini API key. If left blank, the app will use its built-in rule-based heuristic refiner or runtime key.</p>
-
-        <div class="space-y-4 mb-5">
-          <div>
-            <label class="block text-xs font-mono font-bold text-amber-300 mb-1 uppercase tracking-wider">API Key</label>
-            <input type="password" id="geminiApiKeyInput" placeholder="AIzaSy..." class="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-amber-500/40 text-xs text-white focus:outline-none focus:ring-2 focus:ring-neonAmber">
+        <button id="exportCsvBtn" class="p-4 rounded-xl bg-[#071612] hover:bg-[#0b241e] border border-emerald-500/40 text-left transition group">
+          <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-neonEmerald flex items-center justify-center mb-2 group-hover:scale-110 transition">
+            <i class="fa-solid fa-file-excel"></i>
           </div>
-          <div class="p-3.5 rounded-xl bg-amber-950/60 border border-amber-400/50 text-[11px] text-amber-200">
-            <i class="fa-solid fa-shield-halved mr-1"></i> Keys are stored exclusively in your local browser storage and never transmitted to external servers.
-          </div>
-        </div>
+          <div class="text-xs font-bold text-white">CSV Spreadsheet</div>
+          <div class="text-[11px] text-slate-300 mt-1">Tabular format for Google Sheets or Excel performance logging.</div>
+        </button>
 
-        <div class="flex justify-end gap-2">
-          <button id="saveKeyBtn" class="px-5 py-2 rounded-xl text-xs font-mono font-bold uppercase tracking-wider bg-amber-500 hover:bg-amber-400 text-slate-950 transition active:scale-95">
-            Save Key
-          </button>
-        </div>
+        <label class="p-4 rounded-xl bg-[#0c0d1e] hover:bg-[#141633] border border-violet-500/40 text-left transition group cursor-pointer block">
+          <div class="w-8 h-8 rounded-lg bg-violet-500/20 text-neonViolet flex items-center justify-center mb-2 group-hover:scale-110 transition">
+            <i class="fa-solid fa-upload"></i>
+          </div>
+          <div class="text-xs font-bold text-white">Import JSON Backup</div>
+          <div class="text-[11px] text-slate-300 mt-1">Restore your logs from any previous OmniLog export.</div>
+          <input type="file" id="importJsonFileInput" accept=".json" class="hidden">
+        </label>
+      </div>
+
+      <div class="flex items-center justify-between text-xs text-slate-300 border-t border-white/10 pt-4">
+        <span>Protected locally in your browser storage.</span>
+        <button id="copyMdToClipboardBtn" class="text-neonCyan hover:underline font-bold flex items-center gap-1">
+          <i class="fa-regular fa-copy"></i> Copy MD to Clipboard
+        </button>
       </div>
     </div>
+  </div>
 
-    <!-- Toast Notification Container -->
-    <div id="toast" class="fixed bottom-6 right-6 z-50 pointer-events-none transition-all duration-300 opacity-0 transform translate-y-4">
-      <div class="bg-[#050b18] px-4 py-3 rounded-xl shadow-glow-cyan flex items-center space-x-3 text-xs border border-cyan-400 font-semibold">
-        <span id="toastIcon" class="text-neonCyan"><i class="fa-solid fa-circle-check"></i></span>
-        <span id="toastMessage" class="text-white">Notification message</span>
+  <!-- Gemini Key Config Modal -->
+  <div id="keyModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <div class="card-neon-neutral p-6 sm:p-8 rounded-2xl max-w-md w-full border border-amber-400/60 shadow-2xl relative">
+      <button id="closeKeyModal" class="absolute top-4 right-4 text-slate-400 hover:text-white transition">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+
+      <h3 class="text-xl font-display font-extrabold text-white flex items-center gap-2 mb-1">
+        <i class="fa-solid fa-key text-neonAmber"></i> Gemini API Key
+      </h3>
+      <p class="text-xs text-slate-300 mb-4">Provide your Google Gemini API key. If left blank, the app uses its offline smart rephraser.</p>
+
+      <div class="space-y-4 mb-5">
+        <div>
+          <label class="block text-xs font-mono font-bold text-amber-300 mb-1 uppercase tracking-wider">API Key</label>
+          <input type="password" id="geminiApiKeyInput" placeholder="AIzaSy..." class="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-amber-500/40 text-xs text-white focus:outline-none focus:ring-2 focus:ring-neonAmber">
+        </div>
+        <div class="p-3.5 rounded-xl bg-amber-950/60 border border-amber-400/50 text-[11px] text-amber-200">
+          <i class="fa-solid fa-shield-halved mr-1"></i> Keys are stored exclusively in your local browser storage and never transmitted to external servers.
+        </div>
+      </div>
+
+      <div class="flex justify-end gap-2">
+        <button id="saveKeyBtn" class="px-5 py-2 rounded-xl text-xs font-mono font-bold uppercase tracking-wider bg-amber-500 hover:bg-amber-400 text-slate-950 transition active:scale-95">
+          Save Key
+        </button>
       </div>
     </div>
-  </main>
+  </div>
 
+  <!-- Toast Notification Container -->
+  <div id="toast" class="fixed bottom-6 right-6 z-[120] pointer-events-none transition-all duration-300 opacity-0 transform translate-y-4">
+    <div class="bg-[#050b18] px-4 py-3 rounded-xl shadow-glow-cyan flex items-center space-x-3 text-xs border border-cyan-400 font-semibold">
+      <span id="toastIcon" class="text-neonCyan"><i class="fa-solid fa-circle-check"></i></span>
+      <span id="toastMessage" class="text-white">Notification message</span>
+    </div>
+  </div>
+
+  <!-- Audio Context for Cybernetic Unlock Chime -->
   <script>
-    // Persistent state keys
-    const STORAGE_KEY_LOGS = 'omnilog_daily_logs_v1';
-    const STORAGE_KEY_FEEDBACK = 'omnilog_feedback_v1';
-    const STORAGE_KEY_SKILLS = 'omnilog_skills_cache_v1';
+    function playCyberChime(isSuccess = true) {
+      try {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+
+        const now = audioCtx.currentTime;
+        if (isSuccess) {
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(523.25, now);
+          osc.frequency.exponentialRampToValueAtTime(1046.50, now + 0.18);
+          gain.gain.setValueAtTime(0.2, now);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.28);
+          osc.start(now);
+          osc.stop(now + 0.3);
+        } else {
+          osc.type = 'sawtooth';
+          osc.frequency.setValueAtTime(180, now);
+          osc.frequency.linearRampToValueAtTime(110, now + 0.2);
+          gain.gain.setValueAtTime(0.3, now);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.25);
+          osc.start(now);
+          osc.stop(now + 0.25);
+        }
+      } catch (e) {
+        // Audio fallback
+      }
+    }
+  </script>
+
+  <!-- Main JavaScript Logic -->
+  <script>
+    /* -------------------------------------------------------------
+       Robust Passkey Verifier: 'preksha'
+       Works in all environments (file://, http, https, GitHub Pages)
+       ------------------------------------------------------------- */
+    const TARGET_PASSKEY = 'preksha';
+    const STORAGE_KEY_AUTH_TOKEN = 'omnilog_auth_status_v2';
+    const STORAGE_KEY_LOGS = 'omnilog_daily_logs_v2';
+    const STORAGE_KEY_FEEDBACK = 'omnilog_feedback_v2';
+    const STORAGE_KEY_SKILLS = 'omnilog_skills_cache_v2';
     const STORAGE_KEY_API_KEY = 'omnilog_custom_gemini_key';
 
     let dailyLogs = [];
@@ -705,7 +889,7 @@
     let sortDescending = true;
     let selectedSentiment = 'Steady Progress';
 
-    // DNA Animation & Palette State
+    // DNA Animation State
     let scrollY = 0;
     let targetScrollY = 0;
     let scrollVelocity = 0;
@@ -723,6 +907,79 @@
       { name: 'Ultra Violet', strandA: '#a855f7', strandB: '#00f6ff', mid: '#ffffff' }
     ];
 
+    /* Resilient verification function handling spaces, casing & direct match */
+    function verifyPasskey(input) {
+      if (!input || typeof input !== 'string') return false;
+      const cleanInput = input.trim();
+      return cleanInput === TARGET_PASSKEY || cleanInput.toLowerCase() === TARGET_PASSKEY.toLowerCase();
+    }
+
+    /* Authentication Check & Screen Switcher */
+    function checkAuthentication() {
+      const authStatus = localStorage.getItem(STORAGE_KEY_AUTH_TOKEN);
+      const loginScreen = document.getElementById('loginScreen');
+      const dashboardApp = document.getElementById('dashboardApp');
+
+      if (authStatus === 'AUTHENTICATED_PREKSHA') {
+        // Authenticated: reveal dashboard
+        loginScreen.classList.add('opacity-0', 'pointer-events-none');
+        setTimeout(() => {
+          loginScreen.classList.add('hidden');
+          dashboardApp.classList.remove('hidden');
+          setTimeout(() => {
+            dashboardApp.classList.remove('opacity-0', 'pointer-events-none');
+          }, 50);
+        }, 300);
+        loadUserData();
+      } else {
+        // Unauthenticated: lock and display security gate
+        loginScreen.classList.remove('hidden', 'opacity-0', 'pointer-events-none');
+        dashboardApp.classList.add('hidden', 'opacity-0', 'pointer-events-none');
+      }
+    }
+
+    function authenticateUser(passcode) {
+      const feedback = document.getElementById('loginFeedback');
+      const card = document.querySelector('#loginScreen .card-neon-cyan');
+
+      if (!passcode || passcode.trim() === '') {
+        feedback.innerHTML = `<span class="text-rose-400 font-bold"><i class="fa-solid fa-circle-exclamation"></i> Please enter the security passkey</span>`;
+        if (card) {
+          card.classList.add('animate-shake');
+          setTimeout(() => card.classList.remove('animate-shake'), 400);
+        }
+        return;
+      }
+
+      if (verifyPasskey(passcode)) {
+        playCyberChime(true);
+        feedback.innerHTML = `<span class="text-neonEmerald font-bold"><i class="fa-solid fa-check-circle"></i> Identity Verified: Welcome, Saran Raj!</span>`;
+        localStorage.setItem(STORAGE_KEY_AUTH_TOKEN, 'AUTHENTICATED_PREKSHA');
+
+        setTimeout(() => {
+          checkAuthentication();
+          showToast('Biometric Access Granted. Welcome, Saran Raj!', 'success');
+        }, 400);
+      } else {
+        playCyberChime(false);
+        feedback.innerHTML = `<span class="text-rose-400 font-bold"><i class="fa-solid fa-triangle-exclamation"></i> Access Denied: Invalid Security Passkey</span>`;
+        if (card) {
+          card.classList.add('animate-shake');
+          setTimeout(() => card.classList.remove('animate-shake'), 400);
+        }
+      }
+    }
+
+    function lockTerminal() {
+      localStorage.removeItem(STORAGE_KEY_AUTH_TOKEN);
+      const passcodeField = document.getElementById('loginPasscode');
+      if (passcodeField) passcodeField.value = '';
+      const feedback = document.getElementById('loginFeedback');
+      if (feedback) feedback.innerHTML = 'Terminal locked. Enter authorized passkey to reconnect.';
+      checkAuthentication();
+      showToast('Terminal Locked. Session Protected.', 'info');
+    }
+
     /* -------------------------------------------------------------
        High-Contrast 3D Scrolling DNA Double Helix Canvas Engine
        ------------------------------------------------------------- */
@@ -739,32 +996,27 @@
         height = canvas.height = window.innerHeight;
       });
 
-      // Track window scroll with velocity calculation
       window.addEventListener('scroll', () => {
         targetScrollY = window.pageYOffset || document.documentElement.scrollTop;
-        
-        // Update right edge progress bar
         const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
         const progress = totalHeight > 0 ? (targetScrollY / totalHeight) * 100 : 0;
         const bar = document.getElementById('scrollProgressBar');
         if (bar) bar.style.height = `${progress}%`;
       }, { passive: true });
 
-      // Track mouse for parallax tilt
       window.addEventListener('mousemove', (e) => {
         targetMouseX = (e.clientX / width - 0.5) * 2;
         targetMouseY = (e.clientY / height - 0.5) * 2;
       });
 
-      // Floating nucleotide background particles
       const ambientParticles = [];
-      const particleCount = 50;
+      const particleCount = 45;
       for (let i = 0; i < particleCount; i++) {
         ambientParticles.push({
           x: Math.random() * width,
           y: Math.random() * height,
-          vx: (Math.random() - 0.5) * 0.4,
-          vy: (Math.random() - 0.5) * 0.4,
+          vx: (Math.random() - 0.5) * 0.35,
+          vy: (Math.random() - 0.5) * 0.35,
           r: Math.random() * 2.2 + 0.8,
           alpha: Math.random() * 0.5 + 0.2,
           isA: Math.random() > 0.5
@@ -774,7 +1026,6 @@
       let time = 0;
 
       function renderDNA() {
-        // Smooth scroll interpolation (lerp) & compute velocity
         scrollY += (targetScrollY - scrollY) * 0.12;
         scrollVelocity = targetScrollY - lastScrollY;
         lastScrollY = targetScrollY;
@@ -782,16 +1033,14 @@
         mouseX += (targetMouseX - mouseX) * 0.06;
         mouseY += (targetMouseY - mouseY) * 0.06;
 
-        // Dynamic spin speed accelerates directly with scroll velocity
         const baseSpeed = 0.018;
         const velocityBoost = Math.min(Math.abs(scrollVelocity) * 0.0035, 0.09);
         time += baseSpeed + velocityBoost;
 
         ctx.clearRect(0, 0, width, height);
-
         const activePalette = palettes[paletteIndex];
 
-        // 1. Draw floating ambient nucleotide dust
+        // 1. Ambient Nucleotide Particles
         for (let i = 0; i < ambientParticles.length; i++) {
           const p = ambientParticles[i];
           p.x += p.vx + mouseX * 0.25;
@@ -810,20 +1059,18 @@
         }
 
         // 2. 3D Double Helix Geometry
-        const rungCount = 42;
+        const rungCount = 40;
         const stepY = (height + 250) / rungCount;
         const helixRadius = Math.min(width * 0.2, 160);
         const centerX = width > 768 ? width * 0.78 : width * 0.86;
 
         const scrollPhaseOffset = scrollY * 0.007;
         const pitch = 0.16;
-
         const elementsToRender = [];
 
         for (let i = -4; i < rungCount + 4; i++) {
           const y = i * stepY - 100;
           const angle = (y * pitch * 0.035) + time + scrollPhaseOffset;
-
           const xOffset = mouseX * 45 * Math.sin(y * 0.002);
 
           const z1 = Math.cos(angle);
@@ -844,16 +1091,13 @@
           });
         }
 
-        // Painter's sorting (back to front)
         elementsToRender.sort((a, b) => a.avgZ - b.avgZ);
 
-        // Render sorted DNA elements
         for (let j = 0; j < elementsToRender.length; j++) {
           const item = elementsToRender[j];
           const depthAlpha = ((item.avgZ + 1.2) / 2.2);
           const clampedAlpha = Math.max(0.2, Math.min(0.95, depthAlpha));
 
-          // Draw the base-pair connector rung
           ctx.beginPath();
           ctx.moveTo(item.x1, item.y);
           ctx.lineTo(item.x2, item.y);
@@ -868,7 +1112,6 @@
           ctx.globalAlpha = clampedAlpha;
           ctx.stroke();
 
-          // Central hydrogen bond junction
           const midX = (item.x1 + item.x2) / 2;
           ctx.beginPath();
           ctx.arc(midX, item.y, 2.5 * ((item.avgZ + 1.5) / 2.5), 0, Math.PI * 2);
@@ -877,7 +1120,6 @@
           ctx.shadowBlur = item.avgZ > 0 ? 12 : 2;
           ctx.fill();
 
-          // Strand A Node
           const radiusA = 5.2 * item.scale1;
           ctx.beginPath();
           ctx.arc(item.x1, item.y, Math.max(2, radiusA), 0, Math.PI * 2);
@@ -886,7 +1128,6 @@
           ctx.shadowBlur = item.z1 > 0 ? 18 : 4;
           ctx.fill();
 
-          // Strand B Node
           const radiusB = 5.2 * item.scale2;
           ctx.beginPath();
           ctx.arc(item.x2, item.y, Math.max(2, radiusB), 0, Math.PI * 2);
@@ -906,7 +1147,7 @@
     }
 
     /* -------------------------------------------------------------
-       Toast notification utility
+       Toast Notification Utility
        ------------------------------------------------------------- */
     function showToast(message, type = 'success') {
       const toast = document.getElementById('toast');
@@ -932,61 +1173,30 @@
     }
 
     /* -------------------------------------------------------------
-       Initial Data & Storage
+       User Data Storage (Clean Start - No Default Mock Items)
        ------------------------------------------------------------- */
-    function loadInitialData() {
+    function loadUserData() {
       const today = new Date().toISOString().split('T')[0];
       const logDateInput = document.getElementById('logDate');
       if (logDateInput) logDateInput.value = today;
 
       try {
         const savedLogs = localStorage.getItem(STORAGE_KEY_LOGS);
-        dailyLogs = savedLogs ? JSON.parse(savedLogs) : [
-          {
-            id: 'sample-1',
-            date: today,
-            category: 'Engineering',
-            sentiment: 'Super Productive',
-            rawText: 'debugged race condition in auth token refresh, rewrote session redis store serializer in Go, helped Tom with docker container deploy',
-            bullets: [
-              'Architected distributed Redis locking mechanism to eliminate intermittent auth token refresh race conditions.',
-              'Overhauled session cache serializer in Go, slashing p99 API latency by 22% during peak loads.',
-              'Mentored junior engineer through containerized orchestration pipeline, ensuring timely and reliable production rollout.'
-            ],
-            createdAt: Date.now()
-          }
-        ];
+        dailyLogs = savedLogs ? JSON.parse(savedLogs) : [];
       } catch (e) {
         dailyLogs = [];
       }
 
       try {
         const savedFeedback = localStorage.getItem(STORAGE_KEY_FEEDBACK);
-        feedbackEntries = savedFeedback ? JSON.parse(savedFeedback) : [
-          {
-            id: 'fb-1',
-            source: 'Marcus (Tech Lead)',
-            type: 'Technical',
-            text: 'Impressive speed fixing the Redis cache bug. Going forward, ensure all new database queries include unit tests for slow query timeouts.',
-            date: today,
-            createdAt: Date.now()
-          },
-          {
-            id: 'fb-2',
-            source: 'Elena (Director)',
-            type: 'Constructive',
-            text: 'Need to communicate architecture trade-offs more proactively in cross-functional slack channels rather than waiting for sprint reviews.',
-            date: today,
-            createdAt: Date.now() - 86400000
-          }
-        ];
+        feedbackEntries = savedFeedback ? JSON.parse(savedFeedback) : [];
       } catch (e) {
         feedbackEntries = [];
       }
 
       try {
         const savedSkills = localStorage.getItem(STORAGE_KEY_SKILLS);
-        if (savedSkills) skillRecommendations = JSON.parse(savedSkills);
+        skillRecommendations = savedSkills ? JSON.parse(savedSkills) : [];
       } catch (e) {
         skillRecommendations = [];
       }
@@ -1001,10 +1211,9 @@
       renderFeedback();
       renderStats();
       if (skillRecommendations.length > 0) {
-        renderSkillsUI(skillRecommendations);
+        renderSkillsUI({ skills: skillRecommendations });
       } else {
-        const fallback = generateFallbackSkills();
-        renderSkillsUI(fallback);
+        renderEmptySkillsNotice();
       }
     }
 
@@ -1027,7 +1236,28 @@
       if (statTotalLogs) statTotalLogs.textContent = dailyLogs.length;
       if (statRefinedBullets) statRefinedBullets.textContent = bulletCount;
       if (statFeedbackCount) statFeedbackCount.textContent = feedbackEntries.length;
-      if (statSkillsCount) statSkillsCount.textContent = `${skillRecommendations.length > 0 ? skillRecommendations.length : 4} Active`;
+      if (statSkillsCount) statSkillsCount.textContent = `${skillRecommendations.length} Ready`;
+    }
+
+    function renderEmptySkillsNotice() {
+      const grid = document.getElementById('skillsGrid');
+      const actionPlanContainer = document.getElementById('actionPlanContainer');
+      const gapMappingList = document.getElementById('gapMappingList');
+
+      if (grid) {
+        grid.innerHTML = `
+          <div class="col-span-full p-8 border border-dashed border-emerald-500/30 rounded-2xl text-center text-slate-400 text-xs">
+            <i class="fa-solid fa-microchip text-2xl text-neonEmerald mb-2"></i>
+            <p>Log your daily notes and feedback, then click "Synthesize Saran's Skills" to formulate your custom career growth vectors.</p>
+          </div>
+        `;
+      }
+      if (actionPlanContainer) {
+        actionPlanContainer.innerHTML = `<p class="text-xs text-slate-400 italic">No micro-sprints formulated yet. Analyze logs to trigger recommendations.</p>`;
+      }
+      if (gapMappingList) {
+        gapMappingList.innerHTML = `<p class="text-xs text-slate-400 italic">No feedback gaps mapped yet.</p>`;
+      }
     }
 
     /* -------------------------------------------------------------
@@ -1038,11 +1268,11 @@
       const apiKey = customApiKey || "";
       const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
 
-      const systemPrompt = `You are a Principal Engineering Career Coach and technical writer.
-Transform messy, colloquial daily work thoughts and notes into 3 to 5 crisp, punchy, professional accomplishment bullet points.
+      const systemPrompt = `You are a Principal Engineering Career Coach and technical writer for Saran Raj.
+Transform messy daily work notes into 3 to 4 crisp, punchy, professional accomplishment bullet points tailored for Saran Raj's portfolio.
 Guidelines:
 - Start with strong action verbs (e.g., 'Architected', 'Spearheaded', 'Optimized', 'Refactored', 'Orchestrated').
-- Highlight technical scope, problem solved, and business/performance impact.
+- Highlight technical scope, problem solved, and business impact.
 - Be concise (1-2 sentences per bullet).
 - Return STRICT JSON conforming to the schema without markdown tags.`;
 
@@ -1059,8 +1289,7 @@ Guidelines:
               bullets: {
                 type: "ARRAY",
                 items: { type: "STRING" }
-              },
-              detectedSentiment: { type: "STRING" }
+              }
             },
             required: ["bullets"]
           }
@@ -1098,7 +1327,7 @@ Guidelines:
 
       if (items.length === 0) {
         return [
-          `Spearheaded critical initiatives in ${category}, delivering key roadmap updates.`,
+          `Spearheaded critical engineering initiatives in ${category}, delivering high-impact roadmap features.`,
           `Analyzed operational pipelines and eliminated critical technical bottlenecks.`
         ];
       }
@@ -1130,7 +1359,7 @@ Guidelines:
         container.innerHTML = `
           <div class="p-6 border border-dashed border-pink-500/40 rounded-xl text-center flex flex-col items-center justify-center text-slate-300 text-xs">
             <i class="fa-solid fa-dna text-neonFuchsia text-2xl mb-2 animate-bounce"></i>
-            Enter raw work notes on the left and click "Refine with Gemini AI" to create executive bullet rungs.
+            Enter raw thoughts on the left and click "Refine with Gemini AI" to synthesize executive bullets.
           </div>
         `;
         return;
@@ -1201,7 +1430,7 @@ Guidelines:
         container.innerHTML = `
           <div class="card-neon-neutral p-8 rounded-2xl text-center text-slate-400">
             <i class="fa-solid fa-dna text-3xl mb-2 text-neonCyan"></i>
-            <p class="text-sm">No genome logs match your filter criteria.</p>
+            <p class="text-sm">No work logs recorded yet. Begin logging your accomplishments above.</p>
           </div>
         `;
         return;
@@ -1256,10 +1485,10 @@ Guidelines:
             ${bulletsHtml}
           </ul>
 
-          <!-- Raw Input Collapsible Accordion -->
+          <!-- Raw Input Accordion -->
           <details class="group border-t border-cyan-500/20 pt-2">
             <summary class="text-[11px] font-mono text-slate-400 hover:text-neonCyan cursor-pointer list-none flex items-center justify-between font-semibold">
-              <span>Inspect Raw Source Dump</span>
+              <span>Inspect Saran's Raw Source Dump</span>
               <i class="fa-solid fa-chevron-down text-[10px] transform group-open:rotate-180 transition"></i>
             </summary>
             <p class="mt-2 text-xs font-mono bg-[#030612] p-3.5 rounded-xl text-slate-300 whitespace-pre-wrap border border-cyan-500/20">${escapeHTML(log.rawText)}</p>
@@ -1314,7 +1543,7 @@ Guidelines:
         container.innerHTML = `
           <div class="p-8 text-center text-slate-400 border border-dashed border-slate-700 rounded-xl text-xs">
             <i class="fa-regular fa-comment-dots text-2xl text-slate-500 mb-2"></i>
-            <p>No feedback recorded yet. Add constructive pointers or praise above.</p>
+            <p>No feedback recorded yet. Log constructive critique or praise received from managers or peers.</p>
           </div>
         `;
         return;
@@ -1368,8 +1597,13 @@ Guidelines:
       const analyzeBtnText = document.getElementById('analyzeSkillsBtnText');
       const statusTimestamp = document.getElementById('skillStatusTimestamp');
 
+      if (dailyLogs.length === 0 && feedbackEntries.length === 0) {
+        showToast('Please record at least 1 work log or feedback note first.', 'error');
+        return;
+      }
+
       analyzeBtn.disabled = true;
-      analyzeBtnText.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Decoding Career Genome...`;
+      analyzeBtnText.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Synthesizing Saran's DNA...`;
 
       const recentWorkSummary = dailyLogs.slice(0, 10).map(l => ({
         date: l.date,
@@ -1387,10 +1621,10 @@ Guidelines:
       const apiKey = customApiKey || "";
       const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
 
-      const systemPrompt = `You are a Principal Engineering Career Mentor and Staff Plus coach.
-Analyze the user's daily work logs AND manager feedback. Identify key skill development opportunities.
+      const systemPrompt = `You are a Principal Engineering Career Mentor coaching Saran Raj.
+Analyze Saran Raj's daily work logs and manager feedback. Identify high-leverage skill development vectors.
 Focus intensely on closing gaps mentioned in constructive or technical feedback.
-Return STRICT JSON conforming to the requested schema.`;
+Return STRICT JSON conforming to the schema.`;
 
       const userPrompt = `
 Work Logs:
@@ -1399,7 +1633,7 @@ ${JSON.stringify(recentWorkSummary)}
 Feedback History:
 ${JSON.stringify(feedbackSummary)}
 
-Produce an actionable skill development matrix with skills to prioritize, gaps directly linked to feedback, and 30-day micro-sprints.`;
+Produce an actionable skill development matrix with skills to prioritize, gaps directly linked to feedback, and 30-day micro-sprints for Saran Raj.`;
 
       const payload = {
         contents: [{ role: 'user', parts: [{ text: userPrompt }] }],
@@ -1462,7 +1696,7 @@ Produce an actionable skill development matrix with skills to prioritize, gaps d
         saveStateToLocal();
         renderSkillsUI(parsed);
         statusTimestamp.textContent = `Decoded ${new Date().toLocaleTimeString()}`;
-        showToast('Career Genome updated via Gemini AI!', 'success');
+        showToast('Saran Raj Career Genome updated via Gemini AI!', 'success');
       } catch (err) {
         console.warn("Using algorithmic heuristic skill synthesizer:", err.message);
         const fallback = generateFallbackSkills();
@@ -1473,7 +1707,7 @@ Produce an actionable skill development matrix with skills to prioritize, gaps d
         showToast('Skill analysis generated via rule engine', 'info');
       } finally {
         analyzeBtn.disabled = false;
-        analyzeBtnText.innerHTML = `Analyze Skills & Feedback`;
+        analyzeBtnText.innerHTML = `Synthesize Saran's Skills`;
       }
     }
 
@@ -1482,43 +1716,36 @@ Produce an actionable skill development matrix with skills to prioritize, gaps d
       return {
         skills: [
           {
-            name: "High-Availability System Telemetry",
+            name: "High-Availability System Architecture",
             type: "Technical",
-            level: 72,
-            reason: "Derived from recent distributed cache optimization & performance logs.",
-            nextStep: "Implement OpenTelemetry spans and automated alerting on p99 latencies."
-          },
-          {
-            name: "Proactive Stakeholder Alignment",
-            type: "Soft Skill",
-            level: 56,
-            reason: hasFeedback ? "Direct response to leadership critique on cross-functional updates." : "Essential milestone for senior staff engineering track.",
-            nextStep: "Draft weekly asynchronous progress briefs for product partners."
-          },
-          {
-            name: "Distributed Resilience Patterns",
-            type: "Technical",
-            level: 65,
-            reason: "Frequent container orchestration & error-boundary updates in logs.",
-            nextStep: "Build automated circuit breakers and retry exponential backoffs."
-          },
-          {
-            name: "Architectural RFC Consensus",
-            type: "Leadership",
             level: 80,
-            reason: "Strengthen team-wide technical alignment before writing complex code.",
-            nextStep: "Publish a 1-page decision record for the upcoming service boundary."
+            reason: "Synthesized from core system enhancements and backend work logs.",
+            nextStep: "Formalize service level objectives (SLOs) and telemetry monitors."
+          },
+          {
+            name: "Proactive Stakeholder Transparency",
+            type: "Leadership",
+            level: 70,
+            reason: hasFeedback ? "Direct response to team and leadership alignment feedback." : "Crucial milestone for senior engineering track.",
+            nextStep: "Publish weekly asynchronous progress briefs prior to sprint check-ins."
+          },
+          {
+            name: "Fault-Tolerant Distributed Pipelines",
+            type: "Technical",
+            level: 85,
+            reason: "Frequent operational optimization patterns in engineering logs.",
+            nextStep: "Incorporate circuit breakers and automated backoff mechanisms."
           }
         ],
         gapMappings: feedbackEntries.map(f => ({
           feedbackSource: f.source,
           targetSkill: f.type === 'Technical' ? "Production Observability & Resilience" : "Clear Asynchronous Transparency",
-          actionableCorrection: `Address '${f.text.slice(0, 50)}...' by proposing architecture check-ins 48h prior to sprint close.`
+          actionableCorrection: `Address '${f.text.slice(0, 50)}...' by scheduling design checkpoints early.`
         })),
         actionPlan: [
           "Sprint 1: Document boundary test cases and automated retry logic for external services.",
           "Sprint 2: Share an early technical design summary in Slack 48 hours prior to implementation.",
-          "Sprint 3: Host a 20-minute knowledge sharing session on debugging caching layers.",
+          "Sprint 3: Host a 20-minute knowledge sharing session on key system components.",
           "Sprint 4: Review progress against manager's feedback in next monthly 1-on-1."
         ]
       };
@@ -1591,7 +1818,8 @@ Produce an actionable skill development matrix with skills to prioritize, gaps d
     function exportAsJSON() {
       const backupData = {
         exportDate: new Date().toISOString(),
-        version: 'OmniLog-DNA-2.4',
+        author: 'Saran Raj',
+        system: 'OmniLog-DNA-2.5',
         dailyLogs: dailyLogs,
         feedback: feedbackEntries,
         skillMatrix: skillRecommendations
@@ -1599,7 +1827,7 @@ Produce an actionable skill development matrix with skills to prioritize, gaps d
       const jsonString = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(backupData, null, 2));
       const downloadAnchor = document.createElement('a');
       downloadAnchor.setAttribute("href", jsonString);
-      downloadAnchor.setAttribute("download", `OmniLog_Genome_${new Date().toISOString().split('T')[0]}.json`);
+      downloadAnchor.setAttribute("download", `OmniLog_SaranRaj_Genome_${new Date().toISOString().split('T')[0]}.json`);
       document.body.appendChild(downloadAnchor);
       downloadAnchor.click();
       downloadAnchor.remove();
@@ -1607,22 +1835,30 @@ Produce an actionable skill development matrix with skills to prioritize, gaps d
     }
 
     function generateMarkdownReport() {
-      let md = `# OmniLog AI - Career DNA & Daily Work Summary\nGenerated on: ${new Date().toLocaleDateString()}\n\n`;
+      let md = `# OmniLog AI - Career DNA & Work Summary for Saran Raj\nGenerated on: ${new Date().toLocaleDateString()}\nSystem Architect: Saran Raj\n\n`;
 
       md += `## 1. Daily Work Genome Timeline\n\n`;
-      dailyLogs.forEach(l => {
-        md += `### ${l.date} | ${l.category} (${l.sentiment || 'Steady'})\n`;
-        (l.bullets || []).forEach(b => {
-          md += `- ${b}\n`;
+      if (dailyLogs.length === 0) {
+        md += `*No daily logs recorded.*\n\n`;
+      } else {
+        dailyLogs.forEach(l => {
+          md += `### ${l.date} | ${l.category} (${l.sentiment || 'Steady'})\n`;
+          (l.bullets || []).forEach(b => {
+            md += `- ${b}\n`;
+          });
+          md += `\n*Raw notes:* ${l.rawText}\n\n---\n\n`;
         });
-        md += `\n*Raw dump:* ${l.rawText}\n\n---\n\n`;
-      });
+      }
 
       md += `## 2. Manager & Team Feedback Signals\n\n`;
-      feedbackEntries.forEach(f => {
-        md += `- **${f.source}** [${f.type}] (${f.date}): ${f.text}\n`;
-      });
-      md += `\n\n`;
+      if (feedbackEntries.length === 0) {
+        md += `*No feedback entries recorded.*\n\n`;
+      } else {
+        feedbackEntries.forEach(f => {
+          md += `- **${f.source}** [${f.type}] (${f.date}): ${f.text}\n`;
+        });
+        md += `\n\n`;
+      }
 
       if (skillRecommendations.length > 0) {
         md += `## 3. Targeted Skill Growth Vectors\n\n`;
@@ -1642,7 +1878,7 @@ Produce an actionable skill development matrix with skills to prioritize, gaps d
       const url = URL.createObjectURL(blob);
       const downloadAnchor = document.createElement('a');
       downloadAnchor.href = url;
-      downloadAnchor.download = `OmniLog_Career_Report_${new Date().toISOString().split('T')[0]}.md`;
+      downloadAnchor.download = `OmniLog_SaranRaj_Report_${new Date().toISOString().split('T')[0]}.md`;
       document.body.appendChild(downloadAnchor);
       downloadAnchor.click();
       downloadAnchor.remove();
@@ -1662,7 +1898,7 @@ Produce an actionable skill development matrix with skills to prioritize, gaps d
       const url = URL.createObjectURL(blob);
       const downloadAnchor = document.createElement('a');
       downloadAnchor.href = url;
-      downloadAnchor.download = `OmniLog_WorkLogs_${new Date().toISOString().split('T')[0]}.csv`;
+      downloadAnchor.download = `OmniLog_SaranRaj_Logs_${new Date().toISOString().split('T')[0]}.csv`;
       document.body.appendChild(downloadAnchor);
       downloadAnchor.click();
       downloadAnchor.remove();
@@ -1701,7 +1937,7 @@ Produce an actionable skill development matrix with skills to prioritize, gaps d
             renderTimeline();
             renderFeedback();
             if (skillRecommendations.length > 0) renderSkillsUI(imported);
-            showToast('Genome backup restored successfully!', 'success');
+            showToast('Saran Raj backup restored successfully!', 'success');
             document.getElementById('exportModal').classList.add('hidden');
           } else {
             showToast('Invalid backup file structure', 'error');
@@ -1718,7 +1954,23 @@ Produce an actionable skill development matrix with skills to prioritize, gaps d
        ------------------------------------------------------------- */
     window.addEventListener('DOMContentLoaded', () => {
       initDNAAnimation();
-      loadInitialData();
+      checkAuthentication();
+
+      // Authentication events - Strict Passkey Verification
+      const loginForm = document.getElementById('loginForm');
+      loginForm?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const code = document.getElementById('loginPasscode').value;
+        authenticateUser(code);
+      });
+
+      document.getElementById('logoutBtn')?.addEventListener('click', lockTerminal);
+
+      // Toggle pass visibility
+      document.getElementById('togglePassBtn')?.addEventListener('click', () => {
+        const inp = document.getElementById('loginPasscode');
+        inp.type = inp.type === 'password' ? 'text' : 'password';
+      });
 
       // DNA Palette toggle button
       const paletteBtn = document.getElementById('dnaPaletteToggle');
@@ -1726,7 +1978,7 @@ Produce an actionable skill development matrix with skills to prioritize, gaps d
       paletteBtn?.addEventListener('click', () => {
         paletteIndex = (paletteIndex + 1) % palettes.length;
         if (paletteLabel) paletteLabel.textContent = palettes[paletteIndex].name;
-        showToast(`Palette changed: ${palettes[paletteIndex].name}`, 'info');
+        showToast(`Palette: ${palettes[paletteIndex].name}`, 'info');
       });
 
       // Sentiment selection
@@ -1772,7 +2024,7 @@ Produce an actionable skill development matrix with skills to prioritize, gaps d
 
       // Add custom bullet rung
       document.getElementById('addNewBulletBtn')?.addEventListener('click', () => {
-        currentRefinedBullets.push('Spearheaded architectural optimization for key backend workflow.');
+        currentRefinedBullets.push('Spearheaded key engineering deliverable and unblocked team velocity.');
         renderRefinedBulletsUI();
       });
 
@@ -1813,13 +2065,7 @@ Produce an actionable skill development matrix with skills to prioritize, gaps d
         currentRefinedBullets = [];
         renderRefinedBulletsUI();
 
-        showToast('Log committed to your living timeline!', 'success');
-      });
-
-      // Sample day auto-populate
-      document.getElementById('loadSampleBtn')?.addEventListener('click', () => {
-        rawInput.value = "resolved memory spike on payment service batch runner, paired with junior dev on testing retry queues, discussed Q4 platform security roadmap with director, feeling energized after unblocking the release pipeline";
-        showToast('Sample day inserted. Click Refine!', 'info');
+        showToast("Log committed to Saran's timeline!", 'success');
       });
 
       // Filter and search handlers
