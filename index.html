@@ -1,0 +1,1910 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OmniLog AI - High-Contrast Cyber Work Genome & Career Radar</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome 6 Pro / Free CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Google Fonts: Syne, Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            void: '#03050c',
+            obsidian: '#080d1a',
+            surface: 'rgba(11, 18, 36, 0.85)',
+            surfaceElevated: 'rgba(16, 26, 52, 0.95)',
+            neonCyan: '#00f6ff',
+            neonFuchsia: '#ff007a',
+            neonViolet: '#a855f7',
+            neonAmber: '#ffb703',
+            neonEmerald: '#00ffa3',
+            neonBlue: '#3b82f6',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['Syne', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          boxShadow: {
+            'glow-cyan': '0 0 25px -2px rgba(0, 246, 255, 0.45)',
+            'glow-fuchsia': '0 0 25px -2px rgba(255, 0, 122, 0.45)',
+            'glow-emerald': '0 0 25px -2px rgba(0, 255, 163, 0.45)',
+            'glow-amber': '0 0 25px -2px rgba(255, 183, 3, 0.45)',
+            'card-high': '0 10px 40px -10px rgba(0, 0, 0, 0.85), inset 0 1px 0 0 rgba(255, 255, 255, 0.1)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Ultra-High Contrast Neon Utilities */
+    body {
+      background-color: #03050c;
+      color: #f8fafc;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #03050c;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #00f6ff 0%, #ff007a 100%);
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #00f6ff;
+    }
+
+    /* High-Contrast Card Shells with Crisp Luminous Borders */
+    .card-neon-cyan {
+      background: rgba(8, 14, 28, 0.82);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1.5px solid rgba(0, 246, 255, 0.28);
+      box-shadow: 0 12px 35px -8px rgba(0, 0, 0, 0.8), 0 0 20px -6px rgba(0, 246, 255, 0.22);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .card-neon-cyan:hover {
+      border-color: rgba(0, 246, 255, 0.65);
+      box-shadow: 0 16px 45px -8px rgba(0, 0, 0, 0.9), 0 0 32px -4px rgba(0, 246, 255, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .card-neon-fuchsia {
+      background: rgba(14, 8, 22, 0.82);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1.5px solid rgba(255, 0, 122, 0.3);
+      box-shadow: 0 12px 35px -8px rgba(0, 0, 0, 0.8), 0 0 20px -6px rgba(255, 0, 122, 0.25);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .card-neon-fuchsia:hover {
+      border-color: rgba(255, 0, 122, 0.7);
+      box-shadow: 0 16px 45px -8px rgba(0, 0, 0, 0.9), 0 0 32px -4px rgba(255, 0, 122, 0.45);
+      transform: translateY(-2px);
+    }
+
+    .card-neon-emerald {
+      background: rgba(6, 18, 14, 0.82);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1.5px solid rgba(0, 255, 163, 0.3);
+      box-shadow: 0 12px 35px -8px rgba(0, 0, 0, 0.8), 0 0 20px -6px rgba(0, 255, 163, 0.25);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .card-neon-emerald:hover {
+      border-color: rgba(0, 255, 163, 0.7);
+      box-shadow: 0 16px 45px -8px rgba(0, 0, 0, 0.9), 0 0 32px -4px rgba(0, 255, 163, 0.45);
+      transform: translateY(-2px);
+    }
+
+    .card-neon-neutral {
+      background: rgba(10, 16, 30, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1.5px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 12px 35px -8px rgba(0, 0, 0, 0.85);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .card-neon-neutral:hover {
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    /* Gradients and Text Shadows */
+    .title-gradient {
+      background: linear-gradient(135deg, #ffffff 0%, #00f6ff 50%, #ff007a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 14px rgba(0, 246, 255, 0.35));
+    }
+
+    .cyan-glow-text {
+      text-shadow: 0 0 16px rgba(0, 246, 255, 0.7), 0 0 32px rgba(0, 246, 255, 0.3);
+    }
+    .fuchsia-glow-text {
+      text-shadow: 0 0 16px rgba(255, 0, 122, 0.7), 0 0 32px rgba(255, 0, 122, 0.3);
+    }
+
+    /* Floating scroll progress bar */
+    #scrollProgressTrack {
+      position: fixed;
+      right: 6px;
+      top: 15%;
+      height: 70%;
+      width: 4px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 9999px;
+      z-index: 60;
+      pointer-events: none;
+    }
+    #scrollProgressBar {
+      width: 100%;
+      height: 0%;
+      background: linear-gradient(180deg, #00f6ff 0%, #ff007a 50%, #00ffa3 100%);
+      box-shadow: 0 0 16px #00f6ff, 0 0 24px #ff007a;
+      border-radius: 9999px;
+      transition: height 0.08s ease-out;
+    }
+
+    /* Pulse animation for DNA helix active state */
+    @keyframes neonPulse {
+      0%, 100% { opacity: 0.95; transform: scale(1); }
+      50% { opacity: 0.7; transform: scale(0.98); }
+    }
+    .animate-neon-pulse {
+      animation: neonPulse 3s infinite ease-in-out;
+    }
+  </style>
+</head>
+
+<body class="selection:bg-neonFuchsia selection:text-white relative overflow-x-hidden min-h-screen">
+
+  <!-- Interactive 3D Real-Time Scrolling DNA Double Helix Canvas -->
+  <canvas id="dnaCanvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
+
+  <!-- High-Contrast Vignette & Luminous Atmosphere -->
+  <div class="fixed inset-0 pointer-events-none z-0 bg-[radial-gradient(ellipse_at_top,_rgba(0,246,255,0.08)_0%,_transparent_60%)]"></div>
+  <div class="fixed inset-0 pointer-events-none z-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(255,0,122,0.07)_0%,_transparent_60%)]"></div>
+
+  <!-- Right Edge Dynamic Scroll Indicator -->
+  <div id="scrollProgressTrack">
+    <div id="scrollProgressBar"></div>
+  </div>
+
+  <!-- Top Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#040814]/90 backdrop-blur-xl border-b border-cyan-500/25">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 py-3 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <div class="flex items-center space-x-3 cursor-pointer group" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-neonCyan via-neonViolet to-neonFuchsia p-[2px] shadow-glow-cyan group-hover:scale-105 transition duration-300">
+          <div class="w-full h-full bg-[#050814] rounded-[10px] flex items-center justify-center">
+            <i class="fa-solid fa-dna text-neonCyan text-xl group-hover:rotate-45 transition duration-500"></i>
+          </div>
+        </div>
+        <div>
+          <div class="flex items-center space-x-2">
+            <span class="font-display text-xl font-extrabold tracking-wider text-white">OMNI<span class="text-neonCyan">LOG</span></span>
+            <span class="text-[10px] font-mono font-bold uppercase tracking-widest px-2 py-0.5 rounded-full bg-cyan-500/20 text-neonCyan border border-cyan-400/50 shadow-glow-cyan">V2.4 HYPER</span>
+          </div>
+          <p class="text-[10px] font-mono text-slate-300 tracking-wider hidden sm:block">Bio-Adaptive Career Genome Intelligence</p>
+        </div>
+      </div>
+
+      <!-- Center Nav Links -->
+      <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 bg-slate-950/80 px-3 py-1.5 rounded-xl border border-white/10">
+        <a href="#input-section" class="px-3 py-1.5 text-xs font-semibold text-slate-200 hover:text-neonCyan hover:bg-white/5 rounded-lg transition flex items-center gap-1.5">
+          <i class="fa-solid fa-feather-pointed text-neonCyan"></i> Intake
+        </a>
+        <a href="#timeline-section" class="px-3 py-1.5 text-xs font-semibold text-slate-200 hover:text-neonFuchsia hover:bg-white/5 rounded-lg transition flex items-center gap-1.5">
+          <i class="fa-solid fa-timeline text-neonFuchsia"></i> Timeline
+        </a>
+        <a href="#feedback-section" class="px-3 py-1.5 text-xs font-semibold text-slate-200 hover:text-neonAmber hover:bg-white/5 rounded-lg transition flex items-center gap-1.5">
+          <i class="fa-solid fa-comments text-neonAmber"></i> Feedback
+        </a>
+        <a href="#skill-matrix-section" class="px-3 py-1.5 text-xs font-semibold text-slate-200 hover:text-neonEmerald hover:bg-white/5 rounded-lg transition flex items-center gap-1.5">
+          <i class="fa-solid fa-brain text-neonEmerald"></i> Skill Radar
+        </a>
+      </nav>
+
+      <!-- Right Action Items -->
+      <div class="flex items-center space-x-2 sm:space-x-3">
+        <!-- Palette & DNA Preset Switcher -->
+        <button id="dnaPaletteToggle" title="Cycle DNA Palette" class="px-3 py-1.5 rounded-xl text-xs font-mono font-semibold bg-[#0d162d] hover:bg-[#132042] text-neonCyan border border-cyan-400/40 shadow-glow-cyan flex items-center gap-1.5 transition active:scale-95">
+          <i class="fa-solid fa-palette text-neonCyan"></i>
+          <span class="hidden lg:inline text-[11px]" id="paletteLabel">Cyber Neon</span>
+        </button>
+
+        <!-- Gemini API Key Button -->
+        <button id="openKeyModalBtn" class="px-3 py-1.5 rounded-xl text-xs font-mono font-semibold bg-[#1a1428] hover:bg-[#261d3b] text-neonAmber border border-amber-400/40 flex items-center gap-1.5 transition active:scale-95">
+          <i class="fa-solid fa-key text-neonAmber"></i>
+          <span class="hidden sm:inline" id="keyBtnLabel">Gemini Key</span>
+        </button>
+
+        <!-- Export Menu Trigger -->
+        <button id="quickExportBtn" class="px-3.5 py-1.5 rounded-xl text-xs font-bold font-sans bg-gradient-to-r from-neonCyan via-blue-600 to-neonFuchsia hover:opacity-95 text-white shadow-glow-cyan flex items-center gap-2 transition active:scale-95">
+          <i class="fa-solid fa-cloud-arrow-down"></i>
+          <span class="hidden sm:inline">Export & Sync</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-8 pb-32 space-y-16">
+
+    <!-- Hero Showcase Section -->
+    <section class="relative pt-6 pb-4 text-center flex flex-col items-center justify-center">
+      <!-- Status Badge -->
+      <div class="inline-flex items-center space-x-2.5 px-4 py-1.5 rounded-full bg-cyan-950/80 border border-cyan-400/50 text-cyan-200 text-xs font-mono font-semibold mb-5 shadow-glow-cyan">
+        <span class="w-2.5 h-2.5 rounded-full bg-neonCyan animate-ping"></span>
+        <span class="tracking-wide">Interactive 3D DNA Helix Active &bull; Scroll to Accelerate Rotation</span>
+      </div>
+
+      <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight max-w-5xl title-gradient leading-[1.12]">
+        Transform Raw Work Into High-Impact Career DNA.
+      </h1>
+
+      <p class="mt-5 text-slate-200 max-w-3xl text-sm sm:text-base font-normal leading-relaxed">
+        Dump raw engineering tickets, code reviews, and meetings. OmniLog extracts quantifiable bullet rungs, fuses manager critique into strategic skill mutations, and arms you for rapid promotion.
+      </p>
+
+      <!-- Scroll Action Hint -->
+      <div class="mt-6 flex items-center gap-2 text-xs font-mono font-bold text-neonCyan animate-bounce">
+        <i class="fa-solid fa-angles-down"></i>
+        <span>Scroll to spin the Double Helix in real-time</span>
+      </div>
+
+      <!-- High-Contrast Vital Stats Ribbon -->
+      <div class="mt-10 grid grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-4xl">
+        <div class="card-neon-cyan p-4 rounded-2xl text-center">
+          <div class="flex items-center justify-center gap-2 mb-1">
+            <i class="fa-solid fa-database text-neonCyan text-xs"></i>
+            <span class="text-[11px] font-mono text-cyan-200 uppercase font-bold tracking-wider">Genome Logs</span>
+          </div>
+          <div id="statTotalLogs" class="text-3xl font-extrabold font-display text-white cyan-glow-text mt-1">0</div>
+          <div class="text-[10px] text-slate-300 font-mono mt-1">Total recorded days</div>
+        </div>
+
+        <div class="card-neon-fuchsia p-4 rounded-2xl text-center">
+          <div class="flex items-center justify-center gap-2 mb-1">
+            <i class="fa-solid fa-bolt text-neonFuchsia text-xs"></i>
+            <span class="text-[11px] font-mono text-pink-200 uppercase font-bold tracking-wider">Refined Rungs</span>
+          </div>
+          <div id="statRefinedBullets" class="text-3xl font-extrabold font-display text-neonFuchsia fuchsia-glow-text mt-1">0</div>
+          <div class="text-[10px] text-slate-300 font-mono mt-1">Executive impact bullets</div>
+        </div>
+
+        <div class="card-neon-cyan p-4 rounded-2xl text-center" style="border-color: rgba(255, 183, 3, 0.4); box-shadow: 0 0 20px -6px rgba(255, 183, 3, 0.3);">
+          <div class="flex items-center justify-center gap-2 mb-1">
+            <i class="fa-solid fa-comments text-neonAmber text-xs"></i>
+            <span class="text-[11px] font-mono text-amber-200 uppercase font-bold tracking-wider">Manager Signals</span>
+          </div>
+          <div id="statFeedbackCount" class="text-3xl font-extrabold font-display text-neonAmber mt-1">0</div>
+          <div class="text-[10px] text-slate-300 font-mono mt-1">Constructive & praise inputs</div>
+        </div>
+
+        <div class="card-neon-emerald p-4 rounded-2xl text-center">
+          <div class="flex items-center justify-center gap-2 mb-1">
+            <i class="fa-solid fa-crosshairs text-neonEmerald text-xs"></i>
+            <span class="text-[11px] font-mono text-emerald-200 uppercase font-bold tracking-wider">Skill Readines</span>
+          </div>
+          <div id="statSkillsCount" class="text-3xl font-extrabold font-display text-neonEmerald mt-1">4 Active</div>
+          <div class="text-[10px] text-slate-300 font-mono mt-1">Competency vectors mapped</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intake & Refinement Studio Section -->
+    <section id="input-section" class="scroll-mt-24 space-y-4">
+      <div class="flex items-center justify-between">
+        <div>
+          <h2 class="text-2xl font-display font-extrabold text-white flex items-center gap-2.5">
+            <span class="w-9 h-9 rounded-xl bg-cyan-500/20 text-neonCyan flex items-center justify-center text-base border border-cyan-400/50 shadow-glow-cyan">
+              <i class="fa-solid fa-feather-pointed"></i>
+            </span>
+            Raw Daily Log Intake & Synthesis
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-300 mt-1">Dump conversational brain dumps, git commit messages, or meeting debriefs.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <!-- Input Form (Left 7 Cols) -->
+        <div class="lg:col-span-7 card-neon-cyan p-6 sm:p-7 rounded-2xl relative overflow-hidden">
+          <div class="space-y-4">
+            <!-- Row: Date & Category -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-mono font-bold text-cyan-300 mb-1.5 uppercase tracking-wider">Date of Work</label>
+                <input type="date" id="logDate" class="w-full px-3.5 py-2.5 rounded-xl bg-[#070c1a] border border-cyan-500/40 text-white font-mono text-xs focus:ring-2 focus:ring-neonCyan focus:border-neonCyan focus:outline-none transition">
+              </div>
+              <div>
+                <label class="block text-xs font-mono font-bold text-cyan-300 mb-1.5 uppercase tracking-wider">Primary Category</label>
+                <select id="logCategory" class="w-full px-3.5 py-2.5 rounded-xl bg-[#070c1a] border border-cyan-500/40 text-white text-xs font-semibold focus:ring-2 focus:ring-neonCyan focus:border-neonCyan focus:outline-none transition">
+                  <option value="Engineering">🛠️ Engineering & Architecture</option>
+                  <option value="Leadership">🎯 Leadership & Strategic Vision</option>
+                  <option value="Collaboration">🤝 Mentorship & Cross-Team</option>
+                  <option value="Design">🎨 Product Design & UX</option>
+                  <option value="DevOps">⚡ DevOps, SRE & Observability</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Raw text area -->
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <label class="block text-xs font-mono font-bold text-slate-200 uppercase tracking-wider">
+                  Raw Stream of Consciousness
+                </label>
+                <button type="button" id="loadSampleBtn" class="text-xs font-mono font-semibold text-neonCyan hover:underline hover:text-white transition">
+                  + Load sample day
+                </button>
+              </div>
+              <textarea id="rawInput" rows="5" placeholder="e.g. fixed memory leak in ingestion worker service, rewrote cache serialization in Go, debugged redis timeout spike during 2pm incident, helped Sarah onboard auth SDK, felt stuck on docker compose permission bug..." class="w-full px-4 py-3 rounded-xl bg-[#040814] border border-cyan-500/30 text-white text-sm placeholder:text-slate-500 focus:ring-2 focus:ring-neonCyan focus:border-neonCyan focus:outline-none font-sans leading-relaxed"></textarea>
+            </div>
+
+            <!-- Sentiment Pills & Action Button -->
+            <div class="flex flex-wrap items-center justify-between gap-3 pt-2">
+              <div class="flex items-center space-x-2">
+                <span class="text-xs font-mono font-semibold text-slate-300">Energy State:</span>
+                <div class="flex space-x-1.5" id="sentimentButtons">
+                  <button type="button" data-val="Super Productive" class="sentiment-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-950/60 text-emerald-300 border border-emerald-500/50 hover:bg-emerald-500/30 transition">🚀 High Flow</button>
+                  <button type="button" data-val="Steady Progress" class="sentiment-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-cyan-500/30 text-neonCyan border border-neonCyan shadow-glow-cyan transition">🌱 Steady</button>
+                  <button type="button" data-val="Blocked / Heavy" class="sentiment-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-rose-950/60 text-rose-300 border border-rose-500/50 hover:bg-rose-500/30 transition">🧗 Blocked</button>
+                </div>
+              </div>
+
+              <!-- Refine with Gemini AI Button -->
+              <button type="button" id="refineBtn" class="w-full sm:w-auto px-6 py-2.5 rounded-xl font-bold text-xs font-mono uppercase tracking-wider bg-gradient-to-r from-neonCyan via-blue-600 to-neonFuchsia text-white shadow-glow-cyan flex items-center justify-center gap-2 hover:opacity-95 transition transform active:scale-95">
+                <i class="fa-solid fa-wand-magic-sparkles text-sm"></i>
+                <span id="refineBtnText">Refine with Gemini AI</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Refined Action Bullets Preview (Right 5 Cols) -->
+        <div class="lg:col-span-5 card-neon-fuchsia p-6 sm:p-7 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3 border-b border-pink-500/20 pb-3">
+              <div class="flex items-center space-x-2">
+                <span class="w-3 h-3 rounded-full bg-neonFuchsia shadow-glow-fuchsia animate-ping"></span>
+                <h3 class="text-xs font-mono font-bold uppercase tracking-widest text-neonFuchsia">Refined Rung Bullets</h3>
+              </div>
+              <span class="text-xs font-mono font-bold text-pink-200 bg-pink-950/70 px-2 py-0.5 rounded-md border border-pink-500/40" id="bulletCountLabel">0 Bullets</span>
+            </div>
+
+            <p class="text-xs text-slate-300 mb-3">Click directly inside any bullet to edit phrasing or insert quantified metrics before committing to your timeline.</p>
+
+            <!-- Dynamic bullet list container -->
+            <div id="refinedBulletsContainer" class="space-y-3 min-h-[170px] max-h-[260px] overflow-y-auto pr-1">
+              <div class="p-6 border border-dashed border-pink-500/40 rounded-xl text-center flex flex-col items-center justify-center text-slate-300 text-xs">
+                <i class="fa-solid fa-dna text-neonFuchsia text-2xl mb-2 animate-bounce"></i>
+                Enter raw work notes on the left and click "Refine with Gemini AI" to create executive bullet rungs.
+              </div>
+            </div>
+
+            <button type="button" id="addNewBulletBtn" class="mt-3 text-xs font-mono font-bold text-neonCyan hover:text-white flex items-center gap-1.5 transition">
+              <i class="fa-solid fa-plus-circle text-neonCyan"></i> Add custom bullet rung
+            </button>
+          </div>
+
+          <!-- Commit Bar -->
+          <div class="mt-5 pt-4 border-t border-white/10 flex items-center justify-between">
+            <button type="button" id="clearFormBtn" class="text-xs font-semibold text-slate-400 hover:text-rose-400 transition">
+              <i class="fa-solid fa-trash-can mr-1"></i> Discard
+            </button>
+            <button type="button" id="saveLogBtn" class="px-6 py-2.5 rounded-xl text-xs font-bold font-mono uppercase tracking-wider bg-emerald-500 hover:bg-emerald-400 text-slate-950 shadow-glow-emerald flex items-center gap-2 transition active:scale-95">
+              <i class="fa-solid fa-floppy-disk"></i> Commit to Timeline
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Log Timeline Section -->
+    <section id="timeline-section" class="scroll-mt-24 space-y-6">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-cyan-500/20 pb-4">
+        <div>
+          <h2 class="text-2xl font-display font-extrabold text-white flex items-center gap-2.5">
+            <span class="w-9 h-9 rounded-xl bg-neonCyan/20 text-neonCyan flex items-center justify-center text-base border border-neonCyan/50 shadow-glow-cyan">
+              <i class="fa-solid fa-timeline"></i>
+            </span>
+            Work Log Timeline
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-300 mt-1">Chronological record of your accomplishments, linked with the real-time helix spine.</p>
+        </div>
+
+        <!-- Filter and Search controls -->
+        <div class="flex flex-wrap items-center gap-2.5">
+          <div class="relative">
+            <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-xs text-cyan-400"></i>
+            <input type="text" id="timelineSearch" placeholder="Search keywords..." class="pl-8 pr-3 py-2 rounded-xl bg-[#060c1d] border border-cyan-500/40 text-xs font-medium text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-neonCyan w-48">
+          </div>
+          <select id="categoryFilter" class="px-3.5 py-2 rounded-xl bg-[#060c1d] border border-cyan-500/40 text-xs font-semibold text-white focus:outline-none focus:ring-2 focus:ring-neonCyan">
+            <option value="ALL">All Categories</option>
+            <option value="Engineering">Engineering</option>
+            <option value="Leadership">Leadership</option>
+            <option value="Collaboration">Collaboration</option>
+            <option value="Design">Design</option>
+            <option value="DevOps">DevOps</option>
+          </select>
+          <button id="sortOrderToggleBtn" class="px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-xs font-mono font-bold text-neonCyan border border-cyan-500/40 flex items-center gap-1.5 transition">
+            <i class="fa-solid fa-arrow-down-short-wide text-neonCyan"></i>
+            <span id="sortOrderLabel">Newest First</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Timeline Main Grid -->
+      <div class="relative">
+        <!-- Glowing Vertical Helix Connector Strand -->
+        <div class="hidden sm:block absolute left-8 top-6 bottom-6 w-1 bg-gradient-to-b from-neonCyan via-neonFuchsia to-neonEmerald shadow-glow-cyan opacity-50"></div>
+
+        <!-- Dynamic Timeline Item Cards -->
+        <div id="timelineContainer" class="space-y-6">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Manager & Team Feedback Section -->
+    <section id="feedback-section" class="scroll-mt-24 space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-pink-500/20 pb-4">
+        <div>
+          <h2 class="text-2xl font-display font-extrabold text-white flex items-center gap-2.5">
+            <span class="w-9 h-9 rounded-xl bg-neonAmber/20 text-neonAmber flex items-center justify-center text-base border border-neonAmber/50 shadow-glow-amber">
+              <i class="fa-solid fa-comments"></i>
+            </span>
+            Manager & Team Feedback Tracker
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-300 mt-1">Log feedback signals from 1-on-1s and code reviews to feed the AI competency evolution matrix.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <!-- New Feedback Form (5 Cols) -->
+        <div class="lg:col-span-5 card-neon-fuchsia p-6 sm:p-7 rounded-2xl space-y-4">
+          <h3 class="text-xs font-mono font-bold uppercase tracking-widest text-neonFuchsia flex items-center gap-2">
+            <i class="fa-solid fa-plus-circle"></i> Log Feedback Signal
+          </h3>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-mono font-bold text-pink-200 mb-1 uppercase tracking-wider">Source / Reviewer</label>
+              <input type="text" id="feedbackSource" placeholder="e.g. Sarah (Eng Director)" class="w-full px-3.5 py-2.5 rounded-xl bg-[#090514] border border-pink-500/40 text-xs font-semibold text-white focus:outline-none focus:ring-2 focus:ring-neonFuchsia">
+            </div>
+            <div>
+              <label class="block text-xs font-mono font-bold text-pink-200 mb-1 uppercase tracking-wider">Feedback Type</label>
+              <select id="feedbackType" class="w-full px-3.5 py-2.5 rounded-xl bg-[#090514] border border-pink-500/40 text-xs font-semibold text-white focus:outline-none focus:ring-2 focus:ring-neonFuchsia">
+                <option value="Constructive">🔧 Constructive Growth</option>
+                <option value="Praise">⭐ Praise & Recognition</option>
+                <option value="Technical">💻 Tech / Architecture Bar</option>
+                <option value="SoftSkill">🗣️ Communication / Alignment</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-mono font-bold text-pink-200 mb-1 uppercase tracking-wider">Feedback Content & Expectations</label>
+            <textarea id="feedbackText" rows="4" placeholder="e.g. Delivered the payment migration ahead of schedule. However, in future sprints, ensure RFCs are published at least 48h prior to sprint review so platform team has visibility." class="w-full px-4 py-3 rounded-xl bg-[#090514] border border-pink-500/40 text-xs text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-neonFuchsia leading-relaxed"></textarea>
+          </div>
+
+          <div class="flex items-center justify-between pt-2">
+            <span class="text-[11px] font-mono text-slate-300">Auto-saved to localStorage</span>
+            <button type="button" id="saveFeedbackBtn" class="px-5 py-2.5 rounded-xl text-xs font-mono font-bold uppercase tracking-wider bg-gradient-to-r from-neonViolet to-neonFuchsia hover:opacity-95 text-white shadow-glow-fuchsia flex items-center gap-2 transition active:scale-95">
+              <i class="fa-solid fa-floppy-disk"></i> Record Feedback
+            </button>
+          </div>
+        </div>
+
+        <!-- Feedback Log List (7 Cols) -->
+        <div class="lg:col-span-7 card-neon-neutral p-6 sm:p-7 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4 border-b border-white/10 pb-3">
+              <h3 class="text-xs font-mono font-bold uppercase tracking-widest text-white">Feedback History Signals</h3>
+              <span id="feedbackCountBadge" class="text-xs font-mono font-bold px-2.5 py-0.5 rounded-full bg-pink-500/20 text-pink-300 border border-pink-400/50 shadow-glow-fuchsia">0 entries</span>
+            </div>
+
+            <div id="feedbackListContainer" class="space-y-3 max-h-[340px] overflow-y-auto pr-1">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Skill Gap & Career Evolution Matrix -->
+    <section id="skill-matrix-section" class="scroll-mt-24 space-y-6">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-emerald-500/20 pb-4">
+        <div>
+          <h2 class="text-2xl font-display font-extrabold text-white flex items-center gap-2.5">
+            <span class="w-9 h-9 rounded-xl bg-neonEmerald/20 text-neonEmerald flex items-center justify-center text-base border border-neonEmerald/50 shadow-glow-emerald">
+              <i class="fa-solid fa-brain"></i>
+            </span>
+            AI Skill Intelligence & Career Gap Radar
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-300 mt-1">Cross-references your daily output against manager critiques to prescribe 30-day micro-sprints.</p>
+        </div>
+
+        <button type="button" id="analyzeSkillsBtn" class="px-6 py-2.5 rounded-xl font-mono font-bold text-xs uppercase tracking-wider bg-gradient-to-r from-emerald-500 via-teal-500 to-neonCyan text-slate-950 shadow-glow-emerald flex items-center gap-2 hover:opacity-95 transition active:scale-95">
+          <i class="fa-solid fa-microchip"></i>
+          <span id="analyzeSkillsBtnText">Analyze Skills & Feedback</span>
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <!-- Skill Recommendations Radar (8 cols) -->
+        <div class="lg:col-span-8 card-neon-emerald p-6 sm:p-7 rounded-2xl space-y-6">
+          <div class="flex items-center justify-between border-b border-emerald-500/20 pb-3">
+            <h3 class="text-xs font-mono font-bold uppercase tracking-widest text-neonEmerald flex items-center gap-2">
+              <i class="fa-solid fa-bolt text-neonCyan"></i> Recommended Competency Vectors
+            </h3>
+            <span class="text-xs font-mono font-bold text-slate-300" id="skillStatusTimestamp">Awaiting Analysis</span>
+          </div>
+
+          <div id="skillsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Dynamic skill cards inserted by JS -->
+          </div>
+
+          <!-- 30-Day Actionable Action Plan -->
+          <div class="pt-4 border-t border-emerald-500/20">
+            <h4 class="text-xs font-mono font-bold uppercase tracking-widest text-white mb-3 flex items-center gap-2">
+              <i class="fa-solid fa-bullseye text-neonFuchsia"></i> Actionable 30-Day Evolution Sprints
+            </h4>
+            <div id="actionPlanContainer" class="space-y-2.5">
+              <p class="text-xs text-slate-400 italic">No micro-sprints formulated yet. Analyze your logs to trigger recommendations.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feedback-to-Skill Gap Bridge (4 cols) -->
+        <div class="lg:col-span-4 card-neon-neutral p-6 sm:p-7 rounded-2xl flex flex-col justify-between">
+          <div>
+            <h3 class="text-xs font-mono font-bold uppercase tracking-widest text-pink-300 mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-crosshairs text-neonFuchsia"></i> Feedback Gap Mapping
+            </h3>
+            <p class="text-xs text-slate-300 mb-4">Direct correlation between constructive reviewer remarks and target skill adaptations.</p>
+
+            <div id="gapMappingList" class="space-y-3">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <div class="mt-6 p-4 rounded-xl bg-cyan-950/70 border border-cyan-400/40 text-xs text-slate-200">
+            <div class="flex items-center gap-2 font-bold text-neonCyan mb-1">
+              <i class="fa-solid fa-lightbulb"></i> 1-on-1 Promotion Strategy
+            </div>
+            Export your timeline as Markdown before meeting your manager to present concrete proof of self-correction.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Export & Backup Modal -->
+    <div id="exportModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-4">
+      <div class="card-neon-cyan p-6 sm:p-8 rounded-2xl max-w-xl w-full border border-cyan-400 shadow-2xl relative">
+        <button id="closeExportModal" class="absolute top-4 right-4 text-slate-400 hover:text-white transition">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+
+        <h3 class="text-xl font-display font-extrabold text-white flex items-center gap-2 mb-1">
+          <i class="fa-solid fa-cloud-arrow-down text-neonCyan"></i> Export & Backup Career Genome
+        </h3>
+        <p class="text-xs text-slate-300 mb-6">Select a format to preserve your logs or take them to your 1-on-1 performance review.</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+          <button id="exportJsonBtn" class="p-4 rounded-xl bg-[#050c1e] hover:bg-[#091533] border border-cyan-500/40 text-left transition group">
+            <div class="w-8 h-8 rounded-lg bg-cyan-500/20 text-neonCyan flex items-center justify-center mb-2 group-hover:scale-110 transition">
+              <i class="fa-solid fa-file-code"></i>
+            </div>
+            <div class="text-xs font-bold text-white">Full JSON Backup</div>
+            <div class="text-[11px] text-slate-300 mt-1">Export complete raw + refined logs and manager feedback.</div>
+          </button>
+
+          <button id="exportMarkdownBtn" class="p-4 rounded-xl bg-[#14081c] hover:bg-[#200c2d] border border-pink-500/40 text-left transition group">
+            <div class="w-8 h-8 rounded-lg bg-pink-500/20 text-neonFuchsia flex items-center justify-center mb-2 group-hover:scale-110 transition">
+              <i class="fa-solid fa-file-lines"></i>
+            </div>
+            <div class="text-xs font-bold text-white">Markdown 1-on-1 Prep</div>
+            <div class="text-[11px] text-slate-300 mt-1">Formatted document perfect for Notion, Obsidian, or Google Docs.</div>
+          </button>
+
+          <button id="exportCsvBtn" class="p-4 rounded-xl bg-[#071612] hover:bg-[#0b241e] border border-emerald-500/40 text-left transition group">
+            <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-neonEmerald flex items-center justify-center mb-2 group-hover:scale-110 transition">
+              <i class="fa-solid fa-file-excel"></i>
+            </div>
+            <div class="text-xs font-bold text-white">CSV Spreadsheet</div>
+            <div class="text-[11px] text-slate-300 mt-1">Tabular format for Google Sheets or Excel performance logging.</div>
+          </button>
+
+          <label class="p-4 rounded-xl bg-[#0c0d1e] hover:bg-[#141633] border border-violet-500/40 text-left transition group cursor-pointer block">
+            <div class="w-8 h-8 rounded-lg bg-violet-500/20 text-neonViolet flex items-center justify-center mb-2 group-hover:scale-110 transition">
+              <i class="fa-solid fa-upload"></i>
+            </div>
+            <div class="text-xs font-bold text-white">Import JSON Backup</div>
+            <div class="text-[11px] text-slate-300 mt-1">Restore your logs from any previous OmniLog export.</div>
+            <input type="file" id="importJsonFileInput" accept=".json" class="hidden">
+          </label>
+        </div>
+
+        <div class="flex items-center justify-between text-xs text-slate-300 border-t border-white/10 pt-4">
+          <span>All data remains safe in your browser's localStorage.</span>
+          <button id="copyMdToClipboardBtn" class="text-neonCyan hover:underline font-bold flex items-center gap-1">
+            <i class="fa-regular fa-copy"></i> Copy MD to Clipboard
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gemini Key Config Modal -->
+    <div id="keyModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-4">
+      <div class="card-neon-neutral p-6 sm:p-8 rounded-2xl max-w-md w-full border border-amber-400/60 shadow-2xl relative">
+        <button id="closeKeyModal" class="absolute top-4 right-4 text-slate-400 hover:text-white transition">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+
+        <h3 class="text-xl font-display font-extrabold text-white flex items-center gap-2 mb-1">
+          <i class="fa-solid fa-key text-neonAmber"></i> Gemini API Key
+        </h3>
+        <p class="text-xs text-slate-300 mb-4">Provide your Google Gemini API key. If left blank, the app will use its built-in rule-based heuristic refiner or runtime key.</p>
+
+        <div class="space-y-4 mb-5">
+          <div>
+            <label class="block text-xs font-mono font-bold text-amber-300 mb-1 uppercase tracking-wider">API Key</label>
+            <input type="password" id="geminiApiKeyInput" placeholder="AIzaSy..." class="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-amber-500/40 text-xs text-white focus:outline-none focus:ring-2 focus:ring-neonAmber">
+          </div>
+          <div class="p-3.5 rounded-xl bg-amber-950/60 border border-amber-400/50 text-[11px] text-amber-200">
+            <i class="fa-solid fa-shield-halved mr-1"></i> Keys are stored exclusively in your local browser storage and never transmitted to external servers.
+          </div>
+        </div>
+
+        <div class="flex justify-end gap-2">
+          <button id="saveKeyBtn" class="px-5 py-2 rounded-xl text-xs font-mono font-bold uppercase tracking-wider bg-amber-500 hover:bg-amber-400 text-slate-950 transition active:scale-95">
+            Save Key
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 pointer-events-none transition-all duration-300 opacity-0 transform translate-y-4">
+      <div class="bg-[#050b18] px-4 py-3 rounded-xl shadow-glow-cyan flex items-center space-x-3 text-xs border border-cyan-400 font-semibold">
+        <span id="toastIcon" class="text-neonCyan"><i class="fa-solid fa-circle-check"></i></span>
+        <span id="toastMessage" class="text-white">Notification message</span>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Persistent state keys
+    const STORAGE_KEY_LOGS = 'omnilog_daily_logs_v1';
+    const STORAGE_KEY_FEEDBACK = 'omnilog_feedback_v1';
+    const STORAGE_KEY_SKILLS = 'omnilog_skills_cache_v1';
+    const STORAGE_KEY_API_KEY = 'omnilog_custom_gemini_key';
+
+    let dailyLogs = [];
+    let feedbackEntries = [];
+    let skillRecommendations = [];
+    let currentRefinedBullets = [];
+    let sortDescending = true;
+    let selectedSentiment = 'Steady Progress';
+
+    // DNA Animation & Palette State
+    let scrollY = 0;
+    let targetScrollY = 0;
+    let scrollVelocity = 0;
+    let lastScrollY = 0;
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+
+    let paletteIndex = 0;
+    const palettes = [
+      { name: 'Cyber Neon', strandA: '#00f6ff', strandB: '#ff007a', mid: '#ffffff' },
+      { name: 'Bio Emerald', strandA: '#00ffa3', strandB: '#00f6ff', mid: '#e2e8f0' },
+      { name: 'Solar Flame', strandA: '#ffb703', strandB: '#ff007a', mid: '#f8fafc' },
+      { name: 'Ultra Violet', strandA: '#a855f7', strandB: '#00f6ff', mid: '#ffffff' }
+    ];
+
+    /* -------------------------------------------------------------
+       High-Contrast 3D Scrolling DNA Double Helix Canvas Engine
+       ------------------------------------------------------------- */
+    function initDNAAnimation() {
+      const canvas = document.getElementById('dnaCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+
+      let width = (canvas.width = window.innerWidth);
+      let height = (canvas.height = window.innerHeight);
+
+      window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      });
+
+      // Track window scroll with velocity calculation
+      window.addEventListener('scroll', () => {
+        targetScrollY = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // Update right edge progress bar
+        const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = totalHeight > 0 ? (targetScrollY / totalHeight) * 100 : 0;
+        const bar = document.getElementById('scrollProgressBar');
+        if (bar) bar.style.height = `${progress}%`;
+      }, { passive: true });
+
+      // Track mouse for parallax tilt
+      window.addEventListener('mousemove', (e) => {
+        targetMouseX = (e.clientX / width - 0.5) * 2;
+        targetMouseY = (e.clientY / height - 0.5) * 2;
+      });
+
+      // Floating nucleotide background particles
+      const ambientParticles = [];
+      const particleCount = 50;
+      for (let i = 0; i < particleCount; i++) {
+        ambientParticles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * 0.4,
+          vy: (Math.random() - 0.5) * 0.4,
+          r: Math.random() * 2.2 + 0.8,
+          alpha: Math.random() * 0.5 + 0.2,
+          isA: Math.random() > 0.5
+        });
+      }
+
+      let time = 0;
+
+      function renderDNA() {
+        // Smooth scroll interpolation (lerp) & compute velocity
+        scrollY += (targetScrollY - scrollY) * 0.12;
+        scrollVelocity = targetScrollY - lastScrollY;
+        lastScrollY = targetScrollY;
+
+        mouseX += (targetMouseX - mouseX) * 0.06;
+        mouseY += (targetMouseY - mouseY) * 0.06;
+
+        // Dynamic spin speed accelerates directly with scroll velocity
+        const baseSpeed = 0.018;
+        const velocityBoost = Math.min(Math.abs(scrollVelocity) * 0.0035, 0.09);
+        time += baseSpeed + velocityBoost;
+
+        ctx.clearRect(0, 0, width, height);
+
+        const activePalette = palettes[paletteIndex];
+
+        // 1. Draw floating ambient nucleotide dust
+        for (let i = 0; i < ambientParticles.length; i++) {
+          const p = ambientParticles[i];
+          p.x += p.vx + mouseX * 0.25;
+          p.y += p.vy - scrollVelocity * 0.04;
+
+          if (p.x < 0) p.x = width;
+          if (p.x > width) p.x = 0;
+          if (p.y < 0) p.y = height;
+          if (p.y > height) p.y = 0;
+
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = p.isA ? activePalette.strandA : activePalette.strandB;
+          ctx.globalAlpha = p.alpha;
+          ctx.fill();
+        }
+
+        // 2. 3D Double Helix Geometry
+        const rungCount = 42;
+        const stepY = (height + 250) / rungCount;
+        const helixRadius = Math.min(width * 0.2, 160);
+        const centerX = width > 768 ? width * 0.78 : width * 0.86;
+
+        const scrollPhaseOffset = scrollY * 0.007;
+        const pitch = 0.16;
+
+        const elementsToRender = [];
+
+        for (let i = -4; i < rungCount + 4; i++) {
+          const y = i * stepY - 100;
+          const angle = (y * pitch * 0.035) + time + scrollPhaseOffset;
+
+          const xOffset = mouseX * 45 * Math.sin(y * 0.002);
+
+          const z1 = Math.cos(angle);
+          const x1 = centerX + Math.sin(angle) * helixRadius + xOffset;
+
+          const z2 = Math.cos(angle + Math.PI);
+          const x2 = centerX + Math.sin(angle + Math.PI) * helixRadius + xOffset;
+
+          const scale1 = (z1 + 2) / 3;
+          const scale2 = (z2 + 2) / 3;
+          const avgZ = (z1 + z2) / 2;
+
+          elementsToRender.push({
+            type: 'rung',
+            x1, y, z1, scale1,
+            x2, y, z2, scale2,
+            avgZ
+          });
+        }
+
+        // Painter's sorting (back to front)
+        elementsToRender.sort((a, b) => a.avgZ - b.avgZ);
+
+        // Render sorted DNA elements
+        for (let j = 0; j < elementsToRender.length; j++) {
+          const item = elementsToRender[j];
+          const depthAlpha = ((item.avgZ + 1.2) / 2.2);
+          const clampedAlpha = Math.max(0.2, Math.min(0.95, depthAlpha));
+
+          // Draw the base-pair connector rung
+          ctx.beginPath();
+          ctx.moveTo(item.x1, item.y);
+          ctx.lineTo(item.x2, item.y);
+
+          const rungGrad = ctx.createLinearGradient(item.x1, item.y, item.x2, item.y);
+          rungGrad.addColorStop(0, activePalette.strandA);
+          rungGrad.addColorStop(0.5, activePalette.mid);
+          rungGrad.addColorStop(1, activePalette.strandB);
+
+          ctx.strokeStyle = rungGrad;
+          ctx.lineWidth = Math.max(1.2, 3.2 * ((item.avgZ + 1.5) / 2.5));
+          ctx.globalAlpha = clampedAlpha;
+          ctx.stroke();
+
+          // Central hydrogen bond junction
+          const midX = (item.x1 + item.x2) / 2;
+          ctx.beginPath();
+          ctx.arc(midX, item.y, 2.5 * ((item.avgZ + 1.5) / 2.5), 0, Math.PI * 2);
+          ctx.fillStyle = activePalette.mid;
+          ctx.shadowColor = '#ffffff';
+          ctx.shadowBlur = item.avgZ > 0 ? 12 : 2;
+          ctx.fill();
+
+          // Strand A Node
+          const radiusA = 5.2 * item.scale1;
+          ctx.beginPath();
+          ctx.arc(item.x1, item.y, Math.max(2, radiusA), 0, Math.PI * 2);
+          ctx.fillStyle = activePalette.strandA;
+          ctx.shadowColor = activePalette.strandA;
+          ctx.shadowBlur = item.z1 > 0 ? 18 : 4;
+          ctx.fill();
+
+          // Strand B Node
+          const radiusB = 5.2 * item.scale2;
+          ctx.beginPath();
+          ctx.arc(item.x2, item.y, Math.max(2, radiusB), 0, Math.PI * 2);
+          ctx.fillStyle = activePalette.strandB;
+          ctx.shadowColor = activePalette.strandB;
+          ctx.shadowBlur = item.z2 > 0 ? 18 : 4;
+          ctx.fill();
+
+          ctx.shadowBlur = 0;
+          ctx.globalAlpha = 1.0;
+        }
+
+        requestAnimationFrame(renderDNA);
+      }
+
+      renderDNA();
+    }
+
+    /* -------------------------------------------------------------
+       Toast notification utility
+       ------------------------------------------------------------- */
+    function showToast(message, type = 'success') {
+      const toast = document.getElementById('toast');
+      const msg = document.getElementById('toastMessage');
+      const icon = document.getElementById('toastIcon');
+
+      msg.textContent = message;
+      if (type === 'success') {
+        icon.innerHTML = '<i class="fa-solid fa-circle-check text-neonCyan"></i>';
+      } else if (type === 'error') {
+        icon.innerHTML = '<i class="fa-solid fa-triangle-exclamation text-neonFuchsia"></i>';
+      } else {
+        icon.innerHTML = '<i class="fa-solid fa-circle-info text-neonAmber"></i>';
+      }
+
+      toast.classList.remove('opacity-0', 'translate-y-4');
+      toast.classList.add('opacity-100', 'translate-y-0');
+
+      setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', 'translate-y-4');
+      }, 3200);
+    }
+
+    /* -------------------------------------------------------------
+       Initial Data & Storage
+       ------------------------------------------------------------- */
+    function loadInitialData() {
+      const today = new Date().toISOString().split('T')[0];
+      const logDateInput = document.getElementById('logDate');
+      if (logDateInput) logDateInput.value = today;
+
+      try {
+        const savedLogs = localStorage.getItem(STORAGE_KEY_LOGS);
+        dailyLogs = savedLogs ? JSON.parse(savedLogs) : [
+          {
+            id: 'sample-1',
+            date: today,
+            category: 'Engineering',
+            sentiment: 'Super Productive',
+            rawText: 'debugged race condition in auth token refresh, rewrote session redis store serializer in Go, helped Tom with docker container deploy',
+            bullets: [
+              'Architected distributed Redis locking mechanism to eliminate intermittent auth token refresh race conditions.',
+              'Overhauled session cache serializer in Go, slashing p99 API latency by 22% during peak loads.',
+              'Mentored junior engineer through containerized orchestration pipeline, ensuring timely and reliable production rollout.'
+            ],
+            createdAt: Date.now()
+          }
+        ];
+      } catch (e) {
+        dailyLogs = [];
+      }
+
+      try {
+        const savedFeedback = localStorage.getItem(STORAGE_KEY_FEEDBACK);
+        feedbackEntries = savedFeedback ? JSON.parse(savedFeedback) : [
+          {
+            id: 'fb-1',
+            source: 'Marcus (Tech Lead)',
+            type: 'Technical',
+            text: 'Impressive speed fixing the Redis cache bug. Going forward, ensure all new database queries include unit tests for slow query timeouts.',
+            date: today,
+            createdAt: Date.now()
+          },
+          {
+            id: 'fb-2',
+            source: 'Elena (Director)',
+            type: 'Constructive',
+            text: 'Need to communicate architecture trade-offs more proactively in cross-functional slack channels rather than waiting for sprint reviews.',
+            date: today,
+            createdAt: Date.now() - 86400000
+          }
+        ];
+      } catch (e) {
+        feedbackEntries = [];
+      }
+
+      try {
+        const savedSkills = localStorage.getItem(STORAGE_KEY_SKILLS);
+        if (savedSkills) skillRecommendations = JSON.parse(savedSkills);
+      } catch (e) {
+        skillRecommendations = [];
+      }
+
+      const customKey = localStorage.getItem(STORAGE_KEY_API_KEY);
+      if (customKey) {
+        const label = document.getElementById('keyBtnLabel');
+        if (label) label.textContent = 'Key Active';
+      }
+
+      renderTimeline();
+      renderFeedback();
+      renderStats();
+      if (skillRecommendations.length > 0) {
+        renderSkillsUI(skillRecommendations);
+      } else {
+        const fallback = generateFallbackSkills();
+        renderSkillsUI(fallback);
+      }
+    }
+
+    function saveStateToLocal() {
+      localStorage.setItem(STORAGE_KEY_LOGS, JSON.stringify(dailyLogs));
+      localStorage.setItem(STORAGE_KEY_FEEDBACK, JSON.stringify(feedbackEntries));
+      localStorage.setItem(STORAGE_KEY_SKILLS, JSON.stringify(skillRecommendations));
+      renderStats();
+    }
+
+    function renderStats() {
+      const statTotalLogs = document.getElementById('statTotalLogs');
+      const statRefinedBullets = document.getElementById('statRefinedBullets');
+      const statFeedbackCount = document.getElementById('statFeedbackCount');
+      const statSkillsCount = document.getElementById('statSkillsCount');
+
+      let bulletCount = 0;
+      dailyLogs.forEach(l => bulletCount += (l.bullets ? l.bullets.length : 0));
+
+      if (statTotalLogs) statTotalLogs.textContent = dailyLogs.length;
+      if (statRefinedBullets) statRefinedBullets.textContent = bulletCount;
+      if (statFeedbackCount) statFeedbackCount.textContent = feedbackEntries.length;
+      if (statSkillsCount) statSkillsCount.textContent = `${skillRecommendations.length > 0 ? skillRecommendations.length : 4} Active`;
+    }
+
+    /* -------------------------------------------------------------
+       AI Refinement & Algorithmic Heuristic Fallback
+       ------------------------------------------------------------- */
+    async function refineRawLogWithAI(rawText, category) {
+      const customApiKey = localStorage.getItem(STORAGE_KEY_API_KEY) || "";
+      const apiKey = customApiKey || "";
+      const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
+
+      const systemPrompt = `You are a Principal Engineering Career Coach and technical writer.
+Transform messy, colloquial daily work thoughts and notes into 3 to 5 crisp, punchy, professional accomplishment bullet points.
+Guidelines:
+- Start with strong action verbs (e.g., 'Architected', 'Spearheaded', 'Optimized', 'Refactored', 'Orchestrated').
+- Highlight technical scope, problem solved, and business/performance impact.
+- Be concise (1-2 sentences per bullet).
+- Return STRICT JSON conforming to the schema without markdown tags.`;
+
+      const userPrompt = `Category: ${category}\nRaw work dump:\n"${rawText}"\n\nGenerate refined impact bullets.`;
+
+      const payload = {
+        contents: [{ role: 'user', parts: [{ text: userPrompt }] }],
+        systemInstruction: { parts: [{ text: systemPrompt }] },
+        generationConfig: {
+          responseMimeType: "application/json",
+          responseSchema: {
+            type: "OBJECT",
+            properties: {
+              bullets: {
+                type: "ARRAY",
+                items: { type: "STRING" }
+              },
+              detectedSentiment: { type: "STRING" }
+            },
+            required: ["bullets"]
+          }
+        }
+      };
+
+      try {
+        const response = await fetch(apiUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        if (!response.ok) throw new Error(`API status ${response.status}`);
+        const data = await response.json();
+        const jsonText = data.candidates?.[0]?.content?.parts?.[0]?.text;
+        if (jsonText) {
+          const parsed = JSON.parse(jsonText);
+          if (parsed.bullets && parsed.bullets.length > 0) {
+            return parsed.bullets;
+          }
+        }
+        throw new Error("Invalid output format");
+      } catch (err) {
+        console.warn("Using offline smart heuristic rephraser:", err.message);
+        return fallbackLocalRefiner(rawText, category);
+      }
+    }
+
+    function fallbackLocalRefiner(rawText, category) {
+      const items = rawText
+        .split(/[,;\n]+|\band\b/i)
+        .map(s => s.trim())
+        .filter(s => s.length > 4);
+
+      if (items.length === 0) {
+        return [
+          `Spearheaded critical initiatives in ${category}, delivering key roadmap updates.`,
+          `Analyzed operational pipelines and eliminated critical technical bottlenecks.`
+        ];
+      }
+
+      const verbBank = [
+        "Architected and deployed",
+        "Streamlined end-to-end execution for",
+        "Investigated and eliminated bottleneck in",
+        "Partnered with cross-functional stakeholders on",
+        "Automated operational workflows for",
+        "Refactored critical core logic regarding"
+      ];
+
+      return items.slice(0, 4).map((item, idx) => {
+        const clean = item.replace(/^(i |we |fixed |debugged |discussed |did |made |worked on )/i, '');
+        const verb = verbBank[idx % verbBank.length];
+        return `${verb} ${clean}, ensuring reliability and cross-team alignment.`;
+      });
+    }
+
+    function renderRefinedBulletsUI() {
+      const container = document.getElementById('refinedBulletsContainer');
+      const countLabel = document.getElementById('bulletCountLabel');
+      if (!container) return;
+
+      countLabel.textContent = `${currentRefinedBullets.length} Bullet${currentRefinedBullets.length === 1 ? '' : 's'}`;
+
+      if (currentRefinedBullets.length === 0) {
+        container.innerHTML = `
+          <div class="p-6 border border-dashed border-pink-500/40 rounded-xl text-center flex flex-col items-center justify-center text-slate-300 text-xs">
+            <i class="fa-solid fa-dna text-neonFuchsia text-2xl mb-2 animate-bounce"></i>
+            Enter raw work notes on the left and click "Refine with Gemini AI" to create executive bullet rungs.
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = '';
+      currentRefinedBullets.forEach((bullet, index) => {
+        const itemDiv = document.createElement('div');
+        itemDiv.className = 'group relative p-3 rounded-xl bg-[#080d1e] border border-pink-500/40 hover:border-neonFuchsia transition flex items-start gap-2.5';
+
+        itemDiv.innerHTML = `
+          <span class="mt-1 text-neonFuchsia text-xs"><i class="fa-solid fa-circle-chevron-right"></i></span>
+          <div contenteditable="true" data-index="${index}" class="bullet-text flex-1 text-xs text-white focus:outline-none leading-relaxed font-sans">
+            ${escapeHTML(bullet)}
+          </div>
+          <button type="button" data-index="${index}" class="delete-bullet-btn opacity-0 group-hover:opacity-100 text-slate-400 hover:text-rose-400 p-1 transition text-xs" title="Remove bullet">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        `;
+
+        const textElement = itemDiv.querySelector('.bullet-text');
+        textElement.addEventListener('input', (e) => {
+          currentRefinedBullets[index] = e.target.innerText;
+        });
+
+        const delBtn = itemDiv.querySelector('.delete-bullet-btn');
+        delBtn.addEventListener('click', () => {
+          currentRefinedBullets.splice(index, 1);
+          renderRefinedBulletsUI();
+        });
+
+        container.appendChild(itemDiv);
+      });
+    }
+
+    function escapeHTML(str) {
+      return (str || '').replace(/[&<>'"]/g, 
+        tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
+      );
+    }
+
+    /* -------------------------------------------------------------
+       Timeline Rendering Engine
+       ------------------------------------------------------------- */
+    function renderTimeline() {
+      const container = document.getElementById('timelineContainer');
+      const searchVal = (document.getElementById('timelineSearch')?.value || '').toLowerCase().trim();
+      const filterCategory = document.getElementById('categoryFilter')?.value || 'ALL';
+
+      if (!container) return;
+
+      let filtered = dailyLogs.filter(log => {
+        const matchesCategory = filterCategory === 'ALL' || log.category === filterCategory;
+        const matchesSearch = !searchVal || 
+          log.rawText.toLowerCase().includes(searchVal) ||
+          log.category.toLowerCase().includes(searchVal) ||
+          (log.bullets && log.bullets.some(b => b.toLowerCase().includes(searchVal)));
+        return matchesCategory && matchesSearch;
+      });
+
+      filtered.sort((a, b) => {
+        const timeA = new Date(a.date).getTime();
+        const timeB = new Date(b.date).getTime();
+        return sortDescending ? (timeB - timeA) : (timeA - timeB);
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="card-neon-neutral p-8 rounded-2xl text-center text-slate-400">
+            <i class="fa-solid fa-dna text-3xl mb-2 text-neonCyan"></i>
+            <p class="text-sm">No genome logs match your filter criteria.</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = '';
+      filtered.forEach((log) => {
+        const card = document.createElement('div');
+        card.className = 'sm:ml-16 relative card-neon-cyan p-5 sm:p-6 rounded-2xl';
+
+        const categoryBadges = {
+          Engineering: 'text-neonCyan bg-cyan-950/80 border-cyan-400/60 shadow-glow-cyan',
+          Leadership: 'text-neonAmber bg-amber-950/80 border-amber-400/60 shadow-glow-amber',
+          Collaboration: 'text-neonFuchsia bg-pink-950/80 border-pink-400/60 shadow-glow-fuchsia',
+          Design: 'text-pink-300 bg-pink-950/80 border-pink-400/60',
+          DevOps: 'text-neonEmerald bg-emerald-950/80 border-emerald-400/60 shadow-glow-emerald',
+        };
+        const badgeStyle = categoryBadges[log.category] || 'text-slate-200 bg-slate-800 border-slate-600';
+
+        const bulletsHtml = (log.bullets || []).map((b) => `
+          <li class="flex items-start gap-2.5 text-xs text-white leading-relaxed">
+            <span class="text-neonCyan text-[11px] mt-1"><i class="fa-solid fa-circle"></i></span>
+            <span class="flex-1">${escapeHTML(b)}</span>
+          </li>
+        `).join('');
+
+        card.innerHTML = `
+          <!-- Glowing Node Connector Point -->
+          <div class="hidden sm:flex absolute -left-[46px] top-6 w-8 h-8 rounded-full bg-slate-950 border-2 border-neonCyan items-center justify-center shadow-glow-cyan">
+            <div class="w-2.5 h-2.5 rounded-full bg-neonCyan animate-pulse"></div>
+          </div>
+
+          <div class="flex flex-wrap items-center justify-between gap-2 border-b border-cyan-500/20 pb-3 mb-3">
+            <div class="flex items-center space-x-3">
+              <span class="text-xs font-mono font-bold text-white"><i class="fa-regular fa-calendar mr-1.5 text-neonCyan"></i>${log.date}</span>
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold border ${badgeStyle}">${log.category}</span>
+              <span class="text-[11px] font-mono text-cyan-200 px-2.5 py-0.5 rounded-md bg-[#0e172e] border border-cyan-500/30">${log.sentiment || 'Steady'}</span>
+            </div>
+
+            <div class="flex items-center space-x-1.5">
+              <button onclick="editLog('${log.id}')" class="p-1.5 rounded-lg text-slate-300 hover:text-neonCyan hover:bg-white/10 text-xs transition" title="Edit this day">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </button>
+              <button onclick="deleteLog('${log.id}')" class="p-1.5 rounded-lg text-slate-300 hover:text-rose-400 hover:bg-white/10 text-xs transition" title="Delete log">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Refined Bullets -->
+          <ul class="space-y-2 mb-4">
+            ${bulletsHtml}
+          </ul>
+
+          <!-- Raw Input Collapsible Accordion -->
+          <details class="group border-t border-cyan-500/20 pt-2">
+            <summary class="text-[11px] font-mono text-slate-400 hover:text-neonCyan cursor-pointer list-none flex items-center justify-between font-semibold">
+              <span>Inspect Raw Source Dump</span>
+              <i class="fa-solid fa-chevron-down text-[10px] transform group-open:rotate-180 transition"></i>
+            </summary>
+            <p class="mt-2 text-xs font-mono bg-[#030612] p-3.5 rounded-xl text-slate-300 whitespace-pre-wrap border border-cyan-500/20">${escapeHTML(log.rawText)}</p>
+          </details>
+        `;
+
+        container.appendChild(card);
+      });
+    }
+
+    window.deleteLog = function(id) {
+      dailyLogs = dailyLogs.filter(item => item.id !== id);
+      saveStateToLocal();
+      renderTimeline();
+      showToast('Work log deleted', 'info');
+    };
+
+    window.editLog = function(id) {
+      const log = dailyLogs.find(item => item.id === id);
+      if (!log) return;
+
+      document.getElementById('logDate').value = log.date;
+      document.getElementById('logCategory').value = log.category;
+      document.getElementById('rawInput').value = log.rawText;
+      currentRefinedBullets = [...(log.bullets || [])];
+      selectedSentiment = log.sentiment || 'Steady Progress';
+
+      document.querySelectorAll('.sentiment-btn').forEach(btn => {
+        if (btn.dataset.val === selectedSentiment) {
+          btn.className = 'sentiment-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-cyan-500/30 text-neonCyan border border-neonCyan shadow-glow-cyan transition';
+        } else {
+          btn.className = 'sentiment-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 border border-slate-700 hover:bg-white/10 transition';
+        }
+      });
+
+      renderRefinedBulletsUI();
+      document.getElementById('input-section').scrollIntoView({ behavior: 'smooth' });
+      showToast('Loaded into editor for refinement', 'info');
+    };
+
+    /* -------------------------------------------------------------
+       Feedback Processing
+       ------------------------------------------------------------- */
+    function renderFeedback() {
+      const container = document.getElementById('feedbackListContainer');
+      const badge = document.getElementById('feedbackCountBadge');
+      if (!container) return;
+
+      badge.textContent = `${feedbackEntries.length} entries`;
+
+      if (feedbackEntries.length === 0) {
+        container.innerHTML = `
+          <div class="p-8 text-center text-slate-400 border border-dashed border-slate-700 rounded-xl text-xs">
+            <i class="fa-regular fa-comment-dots text-2xl text-slate-500 mb-2"></i>
+            <p>No feedback recorded yet. Add constructive pointers or praise above.</p>
+          </div>
+        `;
+        return;
+      }
+
+      const typeBadges = {
+        Constructive: 'bg-rose-950/80 text-rose-300 border-rose-500/50',
+        Praise: 'bg-emerald-950/80 text-emerald-300 border-emerald-500/50',
+        Technical: 'bg-cyan-950/80 text-neonCyan border-cyan-500/50 shadow-glow-cyan',
+        SoftSkill: 'bg-purple-950/80 text-purple-300 border-purple-500/50'
+      };
+
+      container.innerHTML = '';
+      feedbackEntries.forEach((fb) => {
+        const item = document.createElement('div');
+        item.className = 'p-4 rounded-xl bg-[#070d1e] border border-white/15 hover:border-neonFuchsia transition relative group';
+
+        const badgeClass = typeBadges[fb.type] || 'bg-slate-800 text-slate-300 border-slate-700';
+
+        item.innerHTML = `
+          <div class="flex items-center justify-between mb-1.5">
+            <div class="flex items-center space-x-2">
+              <span class="text-xs font-bold text-white">${escapeHTML(fb.source)}</span>
+              <span class="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full border ${badgeClass}">${fb.type}</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span class="text-[10px] font-mono text-slate-400">${fb.date}</span>
+              <button onclick="deleteFeedback('${fb.id}')" class="text-slate-400 hover:text-rose-400 opacity-0 group-hover:opacity-100 transition text-xs">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
+          </div>
+          <p class="text-xs text-slate-200 leading-relaxed">${escapeHTML(fb.text)}</p>
+        `;
+        container.appendChild(item);
+      });
+    }
+
+    window.deleteFeedback = function(id) {
+      feedbackEntries = feedbackEntries.filter(f => f.id !== id);
+      saveStateToLocal();
+      renderFeedback();
+      showToast('Feedback signal removed', 'info');
+    };
+
+    /* -------------------------------------------------------------
+       AI Skill Matrix & Career Evolution Engine
+       ------------------------------------------------------------- */
+    async function runSkillGapAnalysis() {
+      const analyzeBtn = document.getElementById('analyzeSkillsBtn');
+      const analyzeBtnText = document.getElementById('analyzeSkillsBtnText');
+      const statusTimestamp = document.getElementById('skillStatusTimestamp');
+
+      analyzeBtn.disabled = true;
+      analyzeBtnText.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Decoding Career Genome...`;
+
+      const recentWorkSummary = dailyLogs.slice(0, 10).map(l => ({
+        date: l.date,
+        category: l.category,
+        bullets: l.bullets
+      }));
+
+      const feedbackSummary = feedbackEntries.map(f => ({
+        source: f.source,
+        type: f.type,
+        text: f.text
+      }));
+
+      const customApiKey = localStorage.getItem(STORAGE_KEY_API_KEY) || "";
+      const apiKey = customApiKey || "";
+      const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
+
+      const systemPrompt = `You are a Principal Engineering Career Mentor and Staff Plus coach.
+Analyze the user's daily work logs AND manager feedback. Identify key skill development opportunities.
+Focus intensely on closing gaps mentioned in constructive or technical feedback.
+Return STRICT JSON conforming to the requested schema.`;
+
+      const userPrompt = `
+Work Logs:
+${JSON.stringify(recentWorkSummary)}
+
+Feedback History:
+${JSON.stringify(feedbackSummary)}
+
+Produce an actionable skill development matrix with skills to prioritize, gaps directly linked to feedback, and 30-day micro-sprints.`;
+
+      const payload = {
+        contents: [{ role: 'user', parts: [{ text: userPrompt }] }],
+        systemInstruction: { parts: [{ text: systemPrompt }] },
+        generationConfig: {
+          responseMimeType: "application/json",
+          responseSchema: {
+            type: "OBJECT",
+            properties: {
+              skills: {
+                type: "ARRAY",
+                items: {
+                  type: "OBJECT",
+                  properties: {
+                    name: { type: "STRING" },
+                    type: { type: "STRING" },
+                    level: { type: "NUMBER" },
+                    reason: { type: "STRING" },
+                    nextStep: { type: "STRING" }
+                  },
+                  required: ["name", "type", "level", "reason", "nextStep"]
+                }
+              },
+              gapMappings: {
+                type: "ARRAY",
+                items: {
+                  type: "OBJECT",
+                  properties: {
+                    feedbackSource: { type: "STRING" },
+                    targetSkill: { type: "STRING" },
+                    actionableCorrection: { type: "STRING" }
+                  },
+                  required: ["feedbackSource", "targetSkill", "actionableCorrection"]
+                }
+              },
+              actionPlan: {
+                type: "ARRAY",
+                items: { type: "STRING" }
+              }
+            },
+            required: ["skills", "gapMappings", "actionPlan"]
+          }
+        }
+      };
+
+      try {
+        const response = await fetch(apiUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        if (!response.ok) throw new Error(`API error ${response.status}`);
+        const data = await response.json();
+        const jsonText = data.candidates?.[0]?.content?.parts?.[0]?.text;
+        if (!jsonText) throw new Error("No data in response");
+
+        const parsed = JSON.parse(jsonText);
+        skillRecommendations = parsed.skills || [];
+        saveStateToLocal();
+        renderSkillsUI(parsed);
+        statusTimestamp.textContent = `Decoded ${new Date().toLocaleTimeString()}`;
+        showToast('Career Genome updated via Gemini AI!', 'success');
+      } catch (err) {
+        console.warn("Using algorithmic heuristic skill synthesizer:", err.message);
+        const fallback = generateFallbackSkills();
+        skillRecommendations = fallback.skills;
+        saveStateToLocal();
+        renderSkillsUI(fallback);
+        statusTimestamp.textContent = `Analyzed (Local Heuristics)`;
+        showToast('Skill analysis generated via rule engine', 'info');
+      } finally {
+        analyzeBtn.disabled = false;
+        analyzeBtnText.innerHTML = `Analyze Skills & Feedback`;
+      }
+    }
+
+    function generateFallbackSkills() {
+      const hasFeedback = feedbackEntries.length > 0;
+      return {
+        skills: [
+          {
+            name: "High-Availability System Telemetry",
+            type: "Technical",
+            level: 72,
+            reason: "Derived from recent distributed cache optimization & performance logs.",
+            nextStep: "Implement OpenTelemetry spans and automated alerting on p99 latencies."
+          },
+          {
+            name: "Proactive Stakeholder Alignment",
+            type: "Soft Skill",
+            level: 56,
+            reason: hasFeedback ? "Direct response to leadership critique on cross-functional updates." : "Essential milestone for senior staff engineering track.",
+            nextStep: "Draft weekly asynchronous progress briefs for product partners."
+          },
+          {
+            name: "Distributed Resilience Patterns",
+            type: "Technical",
+            level: 65,
+            reason: "Frequent container orchestration & error-boundary updates in logs.",
+            nextStep: "Build automated circuit breakers and retry exponential backoffs."
+          },
+          {
+            name: "Architectural RFC Consensus",
+            type: "Leadership",
+            level: 80,
+            reason: "Strengthen team-wide technical alignment before writing complex code.",
+            nextStep: "Publish a 1-page decision record for the upcoming service boundary."
+          }
+        ],
+        gapMappings: feedbackEntries.map(f => ({
+          feedbackSource: f.source,
+          targetSkill: f.type === 'Technical' ? "Production Observability & Resilience" : "Clear Asynchronous Transparency",
+          actionableCorrection: `Address '${f.text.slice(0, 50)}...' by proposing architecture check-ins 48h prior to sprint close.`
+        })),
+        actionPlan: [
+          "Sprint 1: Document boundary test cases and automated retry logic for external services.",
+          "Sprint 2: Share an early technical design summary in Slack 48 hours prior to implementation.",
+          "Sprint 3: Host a 20-minute knowledge sharing session on debugging caching layers.",
+          "Sprint 4: Review progress against manager's feedback in next monthly 1-on-1."
+        ]
+      };
+    }
+
+    function renderSkillsUI(data) {
+      const skillsGrid = document.getElementById('skillsGrid');
+      const actionPlanContainer = document.getElementById('actionPlanContainer');
+      const gapMappingList = document.getElementById('gapMappingList');
+
+      if (!skillsGrid) return;
+
+      if (data.skills && data.skills.length > 0) {
+        skillsGrid.innerHTML = '';
+        data.skills.forEach(s => {
+          const card = document.createElement('div');
+          card.className = 'p-4 rounded-xl bg-[#060c1d] border border-emerald-500/40 hover:border-neonEmerald transition';
+
+          card.innerHTML = `
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="text-xs font-bold text-white">${escapeHTML(s.name)}</span>
+              <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full ${s.type === 'Technical' ? 'bg-cyan-500/20 text-neonCyan border border-cyan-400/50' : 'bg-pink-500/20 text-neonFuchsia border border-pink-400/50'}">${s.type}</span>
+            </div>
+            <p class="text-[11px] text-slate-300 mb-2 leading-relaxed">${escapeHTML(s.reason)}</p>
+            <div class="w-full bg-slate-900 rounded-full h-2 mb-2 overflow-hidden border border-white/10">
+              <div class="bg-gradient-to-r from-neonCyan via-neonFuchsia to-neonEmerald h-2 rounded-full shadow-glow-emerald" style="width: ${s.level}%"></div>
+            </div>
+            <div class="flex items-center justify-between text-[10px] font-mono text-slate-400">
+              <span class="text-slate-300 font-semibold">Next Action:</span>
+              <span class="text-neonCyan truncate max-w-[200px] font-medium" title="${escapeHTML(s.nextStep)}">${escapeHTML(s.nextStep)}</span>
+            </div>
+          `;
+          skillsGrid.appendChild(card);
+        });
+      }
+
+      if (data.actionPlan && actionPlanContainer) {
+        actionPlanContainer.innerHTML = '';
+        data.actionPlan.forEach(plan => {
+          const planDiv = document.createElement('div');
+          planDiv.className = 'flex items-center gap-2.5 p-3 rounded-xl bg-[#060c1d] border border-emerald-500/30 text-xs text-white';
+          planDiv.innerHTML = `
+            <i class="fa-solid fa-arrow-right text-neonEmerald text-xs"></i>
+            <span class="leading-relaxed font-medium">${escapeHTML(plan)}</span>
+          `;
+          actionPlanContainer.appendChild(planDiv);
+        });
+      }
+
+      if (data.gapMappings && gapMappingList) {
+        gapMappingList.innerHTML = '';
+        data.gapMappings.forEach(gap => {
+          const gapDiv = document.createElement('div');
+          gapDiv.className = 'p-3.5 rounded-xl bg-[#080e22] border border-pink-500/40 text-xs space-y-1';
+          gapDiv.innerHTML = `
+            <div class="flex items-center justify-between text-[11px] font-mono font-bold">
+              <span class="text-neonFuchsia">${escapeHTML(gap.feedbackSource)}</span>
+              <span class="text-neonCyan">${escapeHTML(gap.targetSkill)}</span>
+            </div>
+            <p class="text-slate-200 text-[11px] leading-relaxed">${escapeHTML(gap.actionableCorrection)}</p>
+          `;
+          gapMappingList.appendChild(gapDiv);
+        });
+      }
+    }
+
+    /* -------------------------------------------------------------
+       Backup, Import, and Export Handlers
+       ------------------------------------------------------------- */
+    function exportAsJSON() {
+      const backupData = {
+        exportDate: new Date().toISOString(),
+        version: 'OmniLog-DNA-2.4',
+        dailyLogs: dailyLogs,
+        feedback: feedbackEntries,
+        skillMatrix: skillRecommendations
+      };
+      const jsonString = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(backupData, null, 2));
+      const downloadAnchor = document.createElement('a');
+      downloadAnchor.setAttribute("href", jsonString);
+      downloadAnchor.setAttribute("download", `OmniLog_Genome_${new Date().toISOString().split('T')[0]}.json`);
+      document.body.appendChild(downloadAnchor);
+      downloadAnchor.click();
+      downloadAnchor.remove();
+      showToast('JSON genome downloaded', 'success');
+    }
+
+    function generateMarkdownReport() {
+      let md = `# OmniLog AI - Career DNA & Daily Work Summary\nGenerated on: ${new Date().toLocaleDateString()}\n\n`;
+
+      md += `## 1. Daily Work Genome Timeline\n\n`;
+      dailyLogs.forEach(l => {
+        md += `### ${l.date} | ${l.category} (${l.sentiment || 'Steady'})\n`;
+        (l.bullets || []).forEach(b => {
+          md += `- ${b}\n`;
+        });
+        md += `\n*Raw dump:* ${l.rawText}\n\n---\n\n`;
+      });
+
+      md += `## 2. Manager & Team Feedback Signals\n\n`;
+      feedbackEntries.forEach(f => {
+        md += `- **${f.source}** [${f.type}] (${f.date}): ${f.text}\n`;
+      });
+      md += `\n\n`;
+
+      if (skillRecommendations.length > 0) {
+        md += `## 3. Targeted Skill Growth Vectors\n\n`;
+        skillRecommendations.forEach(s => {
+          md += `### ${s.name} (${s.type} - Current: ${s.level}%)\n`;
+          md += `- Reason: ${s.reason}\n`;
+          md += `- Next Micro-Sprint: ${s.nextStep}\n\n`;
+        });
+      }
+
+      return md;
+    }
+
+    function exportAsMarkdown() {
+      const mdContent = generateMarkdownReport();
+      const blob = new Blob([mdContent], { type: 'text/markdown;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const downloadAnchor = document.createElement('a');
+      downloadAnchor.href = url;
+      downloadAnchor.download = `OmniLog_Career_Report_${new Date().toISOString().split('T')[0]}.md`;
+      document.body.appendChild(downloadAnchor);
+      downloadAnchor.click();
+      downloadAnchor.remove();
+      URL.revokeObjectURL(url);
+      showToast('Markdown report exported', 'success');
+    }
+
+    function exportAsCSV() {
+      let csv = 'Date,Category,Sentiment,RefinedBullets,RawNotes\n';
+      dailyLogs.forEach(l => {
+        const bulletsText = (l.bullets || []).join(' | ').replace(/"/g, '""');
+        const rawText = (l.rawText || '').replace(/"/g, '""');
+        csv += `"${l.date}","${l.category}","${l.sentiment || ''}","${bulletsText}","${rawText}"\n`;
+      });
+
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const downloadAnchor = document.createElement('a');
+      downloadAnchor.href = url;
+      downloadAnchor.download = `OmniLog_WorkLogs_${new Date().toISOString().split('T')[0]}.csv`;
+      document.body.appendChild(downloadAnchor);
+      downloadAnchor.click();
+      downloadAnchor.remove();
+      URL.revokeObjectURL(url);
+      showToast('CSV export downloaded', 'success');
+    }
+
+    function copyMarkdownToClipboard() {
+      const mdContent = generateMarkdownReport();
+      const tempTextArea = document.createElement('textarea');
+      tempTextArea.value = mdContent;
+      document.body.appendChild(tempTextArea);
+      tempTextArea.select();
+      try {
+        document.execCommand('copy');
+        showToast('Markdown copied to clipboard!', 'success');
+      } catch (err) {
+        showToast('Failed to copy', 'error');
+      }
+      document.body.removeChild(tempTextArea);
+    }
+
+    function handleJSONImport(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        try {
+          const imported = JSON.parse(e.target.result);
+          if (imported.dailyLogs && Array.isArray(imported.dailyLogs)) {
+            dailyLogs = imported.dailyLogs;
+            if (imported.feedback) feedbackEntries = imported.feedback;
+            if (imported.skillMatrix) skillRecommendations = imported.skillMatrix;
+            saveStateToLocal();
+            renderTimeline();
+            renderFeedback();
+            if (skillRecommendations.length > 0) renderSkillsUI(imported);
+            showToast('Genome backup restored successfully!', 'success');
+            document.getElementById('exportModal').classList.add('hidden');
+          } else {
+            showToast('Invalid backup file structure', 'error');
+          }
+        } catch (err) {
+          showToast('Could not parse JSON file', 'error');
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    /* -------------------------------------------------------------
+       App Initializer & Event Listeners
+       ------------------------------------------------------------- */
+    window.addEventListener('DOMContentLoaded', () => {
+      initDNAAnimation();
+      loadInitialData();
+
+      // DNA Palette toggle button
+      const paletteBtn = document.getElementById('dnaPaletteToggle');
+      const paletteLabel = document.getElementById('paletteLabel');
+      paletteBtn?.addEventListener('click', () => {
+        paletteIndex = (paletteIndex + 1) % palettes.length;
+        if (paletteLabel) paletteLabel.textContent = palettes[paletteIndex].name;
+        showToast(`Palette changed: ${palettes[paletteIndex].name}`, 'info');
+      });
+
+      // Sentiment selection
+      const sentimentButtons = document.querySelectorAll('.sentiment-btn');
+      sentimentButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          sentimentButtons.forEach(b => {
+            b.className = 'sentiment-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 border border-slate-700 hover:bg-white/10 transition';
+          });
+          btn.className = 'sentiment-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-cyan-500/30 text-neonCyan border border-neonCyan shadow-glow-cyan transition';
+          selectedSentiment = btn.dataset.val;
+        });
+      });
+
+      // Refine with Gemini AI
+      const refineBtn = document.getElementById('refineBtn');
+      const refineBtnText = document.getElementById('refineBtnText');
+      const rawInput = document.getElementById('rawInput');
+      const logCategory = document.getElementById('logCategory');
+
+      refineBtn?.addEventListener('click', async () => {
+        const text = rawInput.value.trim();
+        if (!text) {
+          showToast('Please enter some raw work notes first.', 'error');
+          return;
+        }
+
+        refineBtn.disabled = true;
+        refineBtnText.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Polishing DNA...`;
+
+        try {
+          const bullets = await refineRawLogWithAI(text, logCategory.value);
+          currentRefinedBullets = bullets;
+          renderRefinedBulletsUI();
+          showToast('Notes refined into executive bullets!', 'success');
+        } catch (e) {
+          showToast('Error during refinement', 'error');
+        } finally {
+          refineBtn.disabled = false;
+          refineBtnText.innerHTML = `Refine with Gemini AI`;
+        }
+      });
+
+      // Add custom bullet rung
+      document.getElementById('addNewBulletBtn')?.addEventListener('click', () => {
+        currentRefinedBullets.push('Spearheaded architectural optimization for key backend workflow.');
+        renderRefinedBulletsUI();
+      });
+
+      // Clear form
+      document.getElementById('clearFormBtn')?.addEventListener('click', () => {
+        rawInput.value = '';
+        currentRefinedBullets = [];
+        renderRefinedBulletsUI();
+        showToast('Form cleared', 'info');
+      });
+
+      // Commit to Timeline
+      document.getElementById('saveLogBtn')?.addEventListener('click', () => {
+        const raw = rawInput.value.trim();
+        const date = document.getElementById('logDate').value || new Date().toISOString().split('T')[0];
+        const category = logCategory.value;
+
+        if (!raw && currentRefinedBullets.length === 0) {
+          showToast('Enter raw work notes or bullets to save.', 'error');
+          return;
+        }
+
+        const newLog = {
+          id: 'log-' + Date.now(),
+          date: date,
+          category: category,
+          sentiment: selectedSentiment,
+          rawText: raw || currentRefinedBullets.join('; '),
+          bullets: currentRefinedBullets.length > 0 ? [...currentRefinedBullets] : [raw],
+          createdAt: Date.now()
+        };
+
+        dailyLogs.unshift(newLog);
+        saveStateToLocal();
+        renderTimeline();
+
+        rawInput.value = '';
+        currentRefinedBullets = [];
+        renderRefinedBulletsUI();
+
+        showToast('Log committed to your living timeline!', 'success');
+      });
+
+      // Sample day auto-populate
+      document.getElementById('loadSampleBtn')?.addEventListener('click', () => {
+        rawInput.value = "resolved memory spike on payment service batch runner, paired with junior dev on testing retry queues, discussed Q4 platform security roadmap with director, feeling energized after unblocking the release pipeline";
+        showToast('Sample day inserted. Click Refine!', 'info');
+      });
+
+      // Filter and search handlers
+      document.getElementById('timelineSearch')?.addEventListener('input', renderTimeline);
+      document.getElementById('categoryFilter')?.addEventListener('change', renderTimeline);
+
+      // Sort order
+      document.getElementById('sortOrderToggleBtn')?.addEventListener('click', () => {
+        sortDescending = !sortDescending;
+        document.getElementById('sortOrderLabel').textContent = sortDescending ? 'Newest First' : 'Oldest First';
+        renderTimeline();
+      });
+
+      // Save Feedback note
+      document.getElementById('saveFeedbackBtn')?.addEventListener('click', () => {
+        const source = document.getElementById('feedbackSource').value.trim();
+        const type = document.getElementById('feedbackType').value;
+        const text = document.getElementById('feedbackText').value.trim();
+        const date = new Date().toISOString().split('T')[0];
+
+        if (!source || !text) {
+          showToast('Provide reviewer source and feedback notes.', 'error');
+          return;
+        }
+
+        const newFeedback = {
+          id: 'fb-' + Date.now(),
+          source: source,
+          type: type,
+          text: text,
+          date: date,
+          createdAt: Date.now()
+        };
+
+        feedbackEntries.unshift(newFeedback);
+        saveStateToLocal();
+        renderFeedback();
+
+        document.getElementById('feedbackSource').value = '';
+        document.getElementById('feedbackText').value = '';
+        showToast('Feedback signal logged successfully', 'success');
+      });
+
+      // Skill analysis trigger
+      document.getElementById('analyzeSkillsBtn')?.addEventListener('click', runSkillGapAnalysis);
+
+      // Modals
+      const exportModal = document.getElementById('exportModal');
+      document.getElementById('quickExportBtn')?.addEventListener('click', () => {
+        exportModal.classList.remove('hidden');
+      });
+      document.getElementById('closeExportModal')?.addEventListener('click', () => {
+        exportModal.classList.add('hidden');
+      });
+
+      const keyModal = document.getElementById('keyModal');
+      const apiKeyInput = document.getElementById('geminiApiKeyInput');
+      document.getElementById('openKeyModalBtn')?.addEventListener('click', () => {
+        apiKeyInput.value = localStorage.getItem(STORAGE_KEY_API_KEY) || '';
+        keyModal.classList.remove('hidden');
+      });
+      document.getElementById('closeKeyModal')?.addEventListener('click', () => {
+        keyModal.classList.add('hidden');
+      });
+      document.getElementById('saveKeyBtn')?.addEventListener('click', () => {
+        const key = apiKeyInput.value.trim();
+        if (key) {
+          localStorage.setItem(STORAGE_KEY_API_KEY, key);
+          document.getElementById('keyBtnLabel').textContent = 'Key Active';
+          showToast('Gemini API key configured', 'success');
+        } else {
+          localStorage.removeItem(STORAGE_KEY_API_KEY);
+          document.getElementById('keyBtnLabel').textContent = 'Gemini Key';
+          showToast('API key removed, using defaults', 'info');
+        }
+        keyModal.classList.add('hidden');
+      });
+
+      // Export trigger handlers
+      document.getElementById('exportJsonBtn')?.addEventListener('click', exportAsJSON);
+      document.getElementById('exportMarkdownBtn')?.addEventListener('click', exportAsMarkdown);
+      document.getElementById('exportCsvBtn')?.addEventListener('click', exportAsCSV);
+      document.getElementById('copyMdToClipboardBtn')?.addEventListener('click', copyMarkdownToClipboard);
+      document.getElementById('importJsonFileInput')?.addEventListener('change', handleJSONImport);
+    });
+  </script>
+</body>
+</html>
